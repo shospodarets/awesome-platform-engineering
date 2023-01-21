@@ -1,8 +1,0 @@
-{
-  "scripts": {
-	"test": "awesome-lint"
-  },
-  "dependencies": {
-    "awesome-lint": "^0.18.1"
-  }
-}
