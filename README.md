@@ -1,6 +1,6 @@
 [![Awesome badge](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
 
-# [Awesome Platform Engineering](https://hospodarets.com/awesome-platform-engineering)
+# [Awesome Platform Engineering](https://shospodarets.github.io/awesome-platform-engineering/)
 
 A curated list of platform solutions, tools, practices and resources for Platform Engineering.
 
