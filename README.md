@@ -98,5 +98,6 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 
 ## Miscellaneous and Related
 
+- [Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
 - [The 12 Platform Challenges](https://www.syntasso.io/post/the-12-platform-challenges-of-christmas)
 
