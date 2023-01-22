@@ -1,0 +1,22 @@
+site_name: Awesome Platform Engineering
+site_url: https://hospodarets.com/awesome-platform-engineering
+site_description: A curated list of platform solutions, tools, practices and resources for Platform Engineering.
+site_author: Serg Hospodarets
+repo_name: shospodarets/awesome-platform-engineering
+repo_url: https://github.com/shospodarets/awesome-platform-engineering
+theme:
+  name: material
+extra:
+  analytics:
+    provider: google
+    property: G-SNWZL73P7L
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/shospodarets
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/shospodarets
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/shospodarets/
+
+nav:
+  - "Awesome Platform Engineering": "index.md"
