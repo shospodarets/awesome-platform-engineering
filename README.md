@@ -32,6 +32,29 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 ## Tooling
 
 - [Platformengineering.org tooling list](https://platformengineering.org/platform-tooling)
+- [Backstage- open-source Internal Development Portal](https://backstage.io/)
+    - [Paid Backstage SaaS](https://roadie.io/)
+- Infrastructure platforms and solutions
+    - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
+    - [Crossplane](https://www.crossplane.io/)
+    - [Kratix](https://kratix.io/)
+- Microservices
+  	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
+    - [JHipster, USe own microservice/microfrontend templates](https://www.jhipster.tech/modules/creating-a-blueprint/#-creating-a-blueprint)
+- Frontend
+    - [Storybook](https://storybook.js.org/)
+    - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
+    - [Customize Create React App config](https://github.com/dilanx/craco)
+- Applications upgradability
+    - [NPM, pip, Gem etc. dependencies updates](https://github.com/renovatebot/renovate)
+    - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
+    - [Upgrade React applications](https://github.com/reactjs/react-codemod)
+- Security
+    - [Semgrep simple static analysis](https://semgrep.dev/)
+    - [Checkmarx](https://checkmarx.com/)
+- Documentation
+    - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
+    - [Slate- simple static docs for API](https://github.com/slatedocs/slate)
 
 ## YouTube channels and playlists
 
