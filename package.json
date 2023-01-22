@@ -1,17 +1,10 @@
 {
   "scripts": {
-	"test": "awesome-lint",
-	"prepare": "husky install"
+    "test": "awesome-lint",
+    "postinstall": "husky install"
   },
   "dependencies": {
-	"awesome-lint": "^0.18.1"
-  },
-  "devDependencies": {
-	"husky": "^8.0.3"
-  },
-  "husky": {
-	"hooks": {
-	  "pre-commit": "npm test"
-	}
+    "awesome-lint": "^0.18.1",
+    "husky": "^8.0.3"
   }
 }
