@@ -1,4 +1,4 @@
-[![Awesome badge](https://awesome.re/badge.svg)](https://github.com/sindresorhus/awesome)
+[![Awesome badge](https://awesome.re/badge.svg)](https://hospodarets.com/awesome-platform-engineering)
 
 # [Awesome Platform Engineering](https://hospodarets.com/awesome-platform-engineering)
 
