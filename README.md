@@ -68,7 +68,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Platform as a Product](https://www.youtube.com/watch?v=b8YHCDMxqfg&ab_channel=PlatformEngineering)
 - [What is Platform Engineering ?](https://www.youtube.com/watch?v=0uuOJ1gzcyE&ab_channel=PlatformsandBeyond)
 - [Platform Engineering as a (Community)](https://www.youtube.com/watch?v=4N2ywun-wTE&ab_channel=GOTOConferences)
-- [Simon Sinek: How to start a cultural transformation?](https://www.youtube.com/watch?v=zClAdLw4yRI&ab_channel=DenkProducties) - A brilliant video on which group of people to concentrate and how to create a Demand.
+- [Simon Sinek: How to start a cultural transformation?](https://www.youtube.com/watch?v=zClAdLw4yRI&ab_channel=DenkProducties) - A brilliant video on which group of people to concentrate and how to create a demand.
 
 ## Chats
 
