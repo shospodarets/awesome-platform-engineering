@@ -17,6 +17,5 @@ extra:
       link: https://twitter.com/shospodarets
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/shospodarets/
-
 nav:
   - "Awesome Platform Engineering": "index.md"
