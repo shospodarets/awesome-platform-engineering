@@ -39,9 +39,13 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
     - [Crossplane](https://www.crossplane.io/)
     - [Kratix](https://kratix.io/)
+- \* as code and templates
+	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
+	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
+    - [Terraform- IaC](https://www.terraform.io/)
 - Microservices
   	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
-    - [JHipster, USe own microservice/microfrontend templates](https://www.jhipster.tech/modules/creating-a-blueprint/#-creating-a-blueprint)
+    - [Waypoint: Create, build and Deploy apps across platform](https://www.waypointproject.io/)
 - Frontend
     - [Storybook](https://storybook.js.org/)
     - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
@@ -50,9 +54,10 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [NPM, pip, Gem etc. dependencies updates](https://github.com/renovatebot/renovate)
     - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
     - [Upgrade React applications](https://github.com/reactjs/react-codemod)
-- Security
+- Security and Policy-as-Code
     - [Semgrep simple static analysis](https://semgrep.dev/)
-    - [Checkmarx](https://checkmarx.com/)
+    - [Checkmarx security testing](https://checkmarx.com/)
+    - [Checkov Policy-as-code](https://www.checkov.io/)
 - Documentation
     - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
     - [Slate- simple static docs for API](https://github.com/slatedocs/slate)
