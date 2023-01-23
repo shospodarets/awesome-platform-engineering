@@ -45,6 +45,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Terraform- IaC](https://www.terraform.io/)
 - Microservices
   	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
+  	- [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
     - [Waypoint: Create, build and Deploy apps across platform](https://www.waypointproject.io/)
 - Frontend
     - [Storybook](https://storybook.js.org/)
