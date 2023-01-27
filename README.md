@@ -49,7 +49,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Checkov Policy-as-code](https://www.checkov.io/)
 - Documentation
     - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
-    - [Slate- simple static docs for API](https://github.com/slatedocs/slate)
+    - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
 - Dev Change management
   	- [Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
   	- [Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
