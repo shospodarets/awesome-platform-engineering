@@ -42,7 +42,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
     - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 - Automation
-	- [AWX- Web UI interface for Ansible](https://github.com/ansible/awx)
+	- [AWX- Web UI and REST API interfaces for Ansible](https://github.com/ansible/awx)
 - Security and Policy-as-Code
     - [Semgrep simple static analysis](https://semgrep.dev/)
     - [Checkmarx security testing](https://checkmarx.com/)
