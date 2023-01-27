@@ -19,19 +19,16 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Miscellaneous and Related](#miscellaneous-and-related)
 
 ## Tooling
-
+- [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Platformengineering.org tooling list](https://platformengineering.org/platform-tooling)
 - [Cloud Native Interactive Landscape](https://landscape.cncf.io/)
-- [Backstage- open-source Internal Development Portal](https://backstage.io/)
-    - [Paid Backstage SaaS](https://roadie.io/)
 - Infrastructure platforms and solutions
     - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
     - [Crossplane](https://www.crossplane.io/)
-    - [Kratix](https://kratix.io/)
 - \* as code and templates
 	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
-	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
     - [Terraform- IaC](https://www.terraform.io/)
+	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - Microservices
   	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
   	- [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
@@ -44,6 +41,8 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [NPM, pip, Gem etc. dependencies updates](https://github.com/renovatebot/renovate)
     - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
     - [Upgrade React applications](https://github.com/reactjs/react-codemod)
+- Automation
+	- [AWX- Web UI interface for Ansible](https://github.com/ansible/awx)
 - Security and Policy-as-Code
     - [Semgrep simple static analysis](https://semgrep.dev/)
     - [Checkmarx security testing](https://checkmarx.com/)
@@ -51,7 +50,6 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - Documentation
     - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
     - [Slate- simple static docs for API](https://github.com/slatedocs/slate)
-
 - Dev Change management
   	- [Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
   	- [Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
@@ -83,6 +81,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Platform Engineering KPIs](https://medium.com/wise-engineering/platform-engineering-kpis-6a3215f0ee14)
 - [Platform Engineering: Creating your Internal Developer Platform](https://medium.com/contino-engineering/creating-your-internal-developer-platform-part-2-65ff217cecd6)
 - [The 10 Platform Engineering Tools To Use in 2022](https://medium.com/@rphilogene/the-10-platform-engineering-tools-to-use-in-2022-c2cbf2561f77)
+- [Platform Engineering at Palo Alto Networks](https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa)
 
 ## Chats
 
