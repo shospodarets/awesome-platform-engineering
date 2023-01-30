@@ -17,6 +17,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Podcasts](#podcasts)
 - [Related company blogs](#related-company-blogs)
 - [Miscellaneous and Related](#miscellaneous-and-related)
+- [Related Lists](#related-lists)
 
 ## Tooling
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
@@ -109,3 +110,8 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 ## Miscellaneous and Related
 
 - [The 12 Platform Challenges](https://www.syntasso.io/post/the-12-platform-challenges-of-christmas)
+
+## Related Lists
+
+- [DevSecOps resources and tooling](https://github.com/TaptuIT/awesome-devsecops/)
+- [An awesome list of Platform Engineering 平台工程列表](https://github.com/toptechevangelist/awesome-platform-engineering)
