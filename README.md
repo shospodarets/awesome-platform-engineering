@@ -48,6 +48,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Semgrep simple static analysis](https://semgrep.dev/)
     - [Checkmarx security testing](https://checkmarx.com/)
     - [Checkov Policy-as-code](https://www.checkov.io/)
+    - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 - Documentation
     - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
     - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
