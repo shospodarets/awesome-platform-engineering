@@ -29,6 +29,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - \* as code and templates
 	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
     - [Terraform- IaC](https://www.terraform.io/)
+    - [Atlantis- Terraform Pull Request Automation](https://www.runatlantis.io/)
 	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - Microservices
   	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
