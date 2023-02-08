@@ -29,7 +29,12 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - Infrastructure as code (IaC) and templates
     - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
     - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
-- \* as code and templates
+- Security and Policy-as-Code
+	- [Semgrep simple static analysis](https://semgrep.dev/)
+	- [Checkmarx security testing](https://checkmarx.com/)
+	- [Checkov Policy-as-code](https://www.checkov.io/)
+	- [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
+- CI/CD pipelines as code
   	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
   	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - Microservices
@@ -46,11 +51,6 @@ A curated list of platform solutions, tools, practices and resources for Platfor
     - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 - Automation
 	- [AWX- Web UI and REST API interfaces for Ansible](https://github.com/ansible/awx)
-- Security and Policy-as-Code
-    - [Semgrep simple static analysis](https://semgrep.dev/)
-    - [Checkmarx security testing](https://checkmarx.com/)
-    - [Checkov Policy-as-code](https://www.checkov.io/)
-    - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 - Documentation
     - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
     - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
