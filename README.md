@@ -26,11 +26,12 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - Infrastructure platforms and solutions
     - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
     - [Crossplane](https://www.crossplane.io/)
+- Infrastructure as code (IaC) and templates
+    - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
+    - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - \* as code and templates
-	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
-    - [Terraform- IaC](https://www.terraform.io/)
-    - [Atlantis- Terraform Pull Request Automation](https://www.runatlantis.io/)
-	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
+  	- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
+  	- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - Microservices
   	- [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
   	- [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
