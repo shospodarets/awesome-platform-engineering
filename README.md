@@ -5,8 +5,8 @@
 A curated list of platform solutions, tools, practices and resources for Platform Engineering.
 
 ## Contents
-- [Tooling - Development Portal, documentation and upgradability](#tooling---development-portal-documentation-and-upgradability)
-- [Tooling - Infrastructure/Pipelines-as-code](#tooling---infrastructurepipelines-as-code)
+- [Tooling\- Development Portal, documentation and upgradability](#tooling--development-portal-documentation-and-upgradability)
+- [Tooling\- Infrastructure/Pipelines-as-code](#tooling--infrastructurepipelines-as-code)
 - [Tooling - Security and Policies](#tooling---security-and-policies)
 - [Tooling - Microservices](#tooling---microservices)
 - [Tooling - Frontend](#tooling---frontend)
@@ -18,7 +18,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Miscellaneous and Related](#miscellaneous-and-related)
 
 
-## Tooling - Development Portal, documentation and upgradability
+## Tooling\- Development Portal, documentation and upgradability
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
@@ -28,7 +28,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
-## Tooling - Infrastructure/Pipelines-as-code
+## Tooling\- Infrastructure/Pipelines-as-code
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
