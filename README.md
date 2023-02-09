@@ -16,8 +16,8 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Tooling— Quality, Testing and monitoring](#tooling-quality-testing-and-monitoring)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
-- [Blogs and media platforms](#blogs-and-media-platforms)
 - [Articles](#articles)
+- [Blogs and media platforms](#blogs-and-media-platforms)
 - [Newsletters, Chats and Podcasts](#newsletters-chats-and-podcasts)
 - [Miscellaneous and Related](#miscellaneous-and-related)
 
@@ -86,14 +86,6 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Simon Sinek: How to start a cultural transformation?](https://www.youtube.com/watch?v=zClAdLw4yRI&ab_channel=DenkProducties) - A brilliant video on how to find a pilot team and create a demand.
 - [Platform Engineering: Why and How to start](https://youtube.com/watch?v=g_gHnBcdov8&feature=shares)
 
-## Blogs and media platforms
-- [Platform Engineering](https://platformengineering.org)
-- [Internal Developer Platform](https://internaldeveloperplatform.org)
-- [The New Stack](https://thenewstack.io/)
-- [Resources about Internal Platform teams and products](https://internalplatforms.com)
-- [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
-- [InfoQ Platform Engineering Articles](https://www.infoq.com/platformengineering/)
-
 ## Articles
 - [What Is Platform Engineering? Role, Principles & Benefits](https://spacelift.io/blog/what-is-platform-engineering)
 - [How to Design an Internal Developer Platform](https://blog.container-solutions.com/how-to-design-an-internal-developer-platform)
@@ -103,6 +95,14 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [The 10 Platform Engineering Tools To Use in 2022](https://medium.com/@rphilogene/the-10-platform-engineering-tools-to-use-in-2022-c2cbf2561f77)
 - [Platform Engineering at Palo Alto Networks](https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa)
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
+
+## Blogs and media platforms
+- [Platform Engineering](https://platformengineering.org)
+- [Internal Developer Platform](https://internaldeveloperplatform.org)
+- [The New Stack](https://thenewstack.io/)
+- [Resources about Internal Platform teams and products](https://internalplatforms.com)
+- [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
+- [InfoQ Platform Engineering Articles](https://www.infoq.com/platformengineering/)
 
 ## Newsletters, Chats and Podcasts
 - [Platform weekly](https://platformweekly.com/)
