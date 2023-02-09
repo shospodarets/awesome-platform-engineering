@@ -6,11 +6,14 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 
 ## Contents
 - [Tooling— Development Portal and documentation](#tooling-development-portal-and-documentation)
-- [Tooling— Infrastructure/Pipelines-as-code](#tooling-infrastructurepipelines-as-code)
-- [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Microservices](#tooling-microservices)
 - [Tooling— Frontend](#tooling-frontend)
 - [Tooling— Feature flags and change management](#tooling-feature-flags-and-change-management)
+- [Tooling— Infrastructure/Pipelines-as-code](#tooling-infrastructurepipelines-as-code)
+- [Tooling— Security and Policies](#tooling-security-and-policies)
+- [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
+- [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
+- [Tooling— Quality, Testing and monitoring](#tooling-quality-testing-and-monitoring)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Blogs and media platforms](#blogs-and-media-platforms)
@@ -23,19 +26,6 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
-
-## Tooling— Infrastructure/Pipelines-as-code
-- [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
-- [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
-- [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
-- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
-- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
-
-## Tooling— Security and Policies
-- [Semgrep security simple static analysis](https://semgrep.dev/)
-- [Checkmarx security testing](https://checkmarx.com/)
-- [Checkov Policy-as-code](https://www.checkov.io/)
-- [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
@@ -54,6 +44,36 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
+
+## Tooling— Infrastructure/Pipelines-as-code
+- [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
+- [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
+- [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
+- [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
+- [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
+
+## Tooling— Security and Policies
+- [Semgrep security simple static analysis](https://semgrep.dev/)
+- [Checkmarx security testing](https://checkmarx.com/)
+- [Checkov Policy-as-code](https://www.checkov.io/)
+- [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
+
+## Tooling— Kubernetes, PAAS and Cloud services
+- [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
+- [Crossplane- control plane framework](https://www.crossplane.io/)
+- [OpenFaaS- deploy serverless functions and existing code to Kubernetes](https://www.openfaas.com/)
+- [Portainer- container management for K8S and more](https://www.portainer.io/)
+
+## Tooling— Service mesh, API Gateway and App Proxies
+- [Istio- open source service mesh](https://istio.io/)
+- [Kong- API Gateway and Service Connectivity Platform](https://konghq.com/)
+- [Traefik- Cloud Native Application Proxy](https://traefik.io/)
+
+## Tooling— Quality, Testing and monitoring
+- [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
+- [Awesome Test Automation- list of test automation frameworks, tools etc.](https://sentry.io/welcome/)
+- [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
+- [Sentry- error monitoring](https://sentry.io/)
 
 
 ## YouTube channels and Videos
