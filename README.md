@@ -5,11 +5,11 @@
 A curated list of platform solutions, tools, practices and resources for Platform Engineering.
 
 ## Contents
-- [Tooling- Development Portal, documentation and upgradability](#tooling--development-portal-documentation-and-upgradability)
-- [Tooling- Infrastructure/Pipelines-as-code](#tooling--infrastructurepipelines-as-code)
-- [Tooling- Security and Policies](#tooling--security-and-policies)
-- [Tooling- Microservices](#tooling--microservices)
-- [Tooling- Frontend](#tooling--frontend)
+- [Tooling - Development Portal, documentation and upgradability](#tooling---development-portal-documentation-and-upgradability)
+- [Tooling - Infrastructure/Pipelines-as-code](#tooling---infrastructurepipelines-as-code)
+- [Tooling - Security and Policies](#tooling---security-and-policies)
+- [Tooling - Microservices](#tooling---microservices)
+- [Tooling - Frontend](#tooling---frontend)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Blogs and media platforms](#blogs-and-media-platforms)
@@ -18,7 +18,7 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Miscellaneous and Related](#miscellaneous-and-related)
 
 
-## Tooling- Development Portal, documentation and upgradability
+## Tooling - Development Portal, documentation and upgradability
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
@@ -28,25 +28,25 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
-## Tooling- Infrastructure/Pipelines-as-code
+## Tooling - Infrastructure/Pipelines-as-code
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
 - [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 
-## Tooling- Security and Policies
+## Tooling - Security and Policies
 - [Semgrep security simple static analysis](https://semgrep.dev/)
 - [Checkmarx security testing](https://checkmarx.com/)
 - [Checkov Policy-as-code](https://www.checkov.io/)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 
-## Tooling- Microservices
+## Tooling - Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
 - [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
 - [Waypoint: Create, build and Deploy apps across platform](https://www.waypointproject.io/)
 
-## Tooling- Frontend
+## Tooling - Frontend
 - [Storybook](https://storybook.js.org/)
 - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
 - [Customize Create React App config](https://github.com/dilanx/craco)
