@@ -5,11 +5,12 @@
 A curated list of platform solutions, tools, practices and resources for Platform Engineering.
 
 ## Contents
-- [Tooling— Development Portal, documentation and upgradability](#tooling-development-portal-documentation-and-upgradability)
+- [Tooling— Development Portal and documentation](#tooling-development-portal-and-documentation)
 - [Tooling— Infrastructure/Pipelines-as-code](#tooling-infrastructurepipelines-as-code)
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Microservices](#tooling-microservices)
 - [Tooling— Frontend](#tooling-frontend)
+- [Tooling— Feature flags and change management](#tooling-feature-flags-and-change-management)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Blogs and media platforms](#blogs-and-media-platforms)
@@ -18,15 +19,10 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Miscellaneous and Related](#miscellaneous-and-related)
 
 
-## Tooling— Development Portal, documentation and upgradability
+## Tooling— Development Portal and documentation
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
-- [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
-- [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
-- [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
-- [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
-- [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
 ## Tooling— Infrastructure/Pipelines-as-code
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
@@ -50,6 +46,14 @@ A curated list of platform solutions, tools, practices and resources for Platfor
 - [Storybook](https://storybook.js.org/)
 - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
 - [Customize Create React App config](https://github.com/dilanx/craco)
+
+## Tooling— Feature flags and change management
+- [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
+- [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
+- [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
+- [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
+- [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
+- [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
 
 ## YouTube channels and Videos
