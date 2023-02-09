@@ -113,6 +113,6 @@ A curated list of tools and resources for Platform Engineering.
 ## Miscellaneous and Related
 - [Cloud Native Interactive Landscape](https://landscape.cncf.io/)
 - [Platformengineering.org tooling list](https://platformengineering.org/platform-tooling)
+- [Platform Engineering list](https://github.com/toptechevangelist/awesome-platform-engineering)
 - [The 12 Platform Challenges](https://www.syntasso.io/post/the-12-platform-challenges-of-christmas)
 - [DevSecOps resources and tooling](https://github.com/TaptuIT/awesome-devsecops/)
-- [An awesome list of Platform Engineering 平台工程列表](https://github.com/toptechevangelist/awesome-platform-engineering)
