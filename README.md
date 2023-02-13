@@ -48,6 +48,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Infrastructure and Artifacts Management
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
+- [Terragrunt for deployment environments (dev/staging/prod) and other features](https://github.com/gruntwork-io/terragrunt)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
 - [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
@@ -77,6 +78,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
+- [Zipkin is a distributed tracing system](https://github.com/openzipkin/zipkin)
 - [Sentry- error monitoring](https://sentry.io/)
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
