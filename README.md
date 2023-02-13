@@ -13,7 +13,8 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
 - [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
-- [Tooling— Quality, Testing, Observability and Cost Optimization](#tooling-quality-testing-observability-and-cost-optimization)
+- [Tooling— Quality and Testing](#tooling-quality-and-testing)
+- [Tooling— Observability and Cost Optimization](#tooling-observability-and-cost-optimization)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Articles](#articles)
@@ -70,9 +71,11 @@ A curated list of tools and resources for Platform Engineering.
 - [Kong- API Gateway and Service Connectivity Platform](https://konghq.com/)
 - [Traefik- Cloud Native Application Proxy](https://traefik.io/)
 
-## Tooling— Quality, Testing, Observability and Cost Optimization
+## Tooling— Quality and Testing
 - [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
-- [Awesome Test Automation- list of test automation frameworks, tools etc.](https://sentry.io/welcome/)
+- [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://sentry.io/welcome/)
+
+## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
 - [Sentry- error monitoring](https://sentry.io/)
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
