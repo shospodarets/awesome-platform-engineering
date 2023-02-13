@@ -13,7 +13,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
 - [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
-- [Tooling— Quality, Testing and monitoring](#tooling-quality-testing-and-monitoring)
+- [Tooling— Quality, Testing, Observability and Cost Optimization](#tooling-quality-testing-observability-and-cost-optimization)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Articles](#articles)
@@ -46,7 +46,6 @@ A curated list of tools and resources for Platform Engineering.
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
 ## Tooling— Infrastructure/Pipelines-as-code
-- [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
@@ -69,11 +68,13 @@ A curated list of tools and resources for Platform Engineering.
 - [Kong- API Gateway and Service Connectivity Platform](https://konghq.com/)
 - [Traefik- Cloud Native Application Proxy](https://traefik.io/)
 
-## Tooling— Quality, Testing and monitoring
+## Tooling— Quality, Testing, Observability and Cost Optimization
 - [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
 - [Awesome Test Automation- list of test automation frameworks, tools etc.](https://sentry.io/welcome/)
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
 - [Sentry- error monitoring](https://sentry.io/)
+- [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
+- [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 
 
 ## YouTube channels and Videos
