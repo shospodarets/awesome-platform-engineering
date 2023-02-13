@@ -9,7 +9,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Microservices](#tooling-microservices)
 - [Tooling— Frontend](#tooling-frontend)
 - [Tooling— Feature flags and change management](#tooling-feature-flags-and-change-management)
-- [Tooling— Infrastructure/Pipelines-as-code](#tooling-infrastructurepipelines-as-code)
+- [Tooling— Infrastructure and Artifacts Management](#tooling-infrastructure-and-artifacts-management)
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
 - [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
@@ -45,11 +45,13 @@ A curated list of tools and resources for Platform Engineering.
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 
-## Tooling— Infrastructure/Pipelines-as-code
+## Tooling— Infrastructure and Artifacts Management
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
 - [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
+- [Artpie- open source artifact management alternative for Artifactory, Nexus etc.](https://github.com/artipie/artipie)
+- [Verdaccio- a simple, zero-config npm registry](https://github.com/verdaccio/verdaccio)
 
 ## Tooling— Security and Policies
 - [Semgrep security simple static analysis](https://semgrep.dev/)
