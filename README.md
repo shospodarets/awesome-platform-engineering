@@ -62,6 +62,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 
 ## Tooling— Kubernetes, PAAS and Cloud services
+- [Argonaut - Deploy apps and infrastructure on your cloud in minutes](https://www.argonaut.dev/)
 - [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
 - [Crossplane- control plane framework](https://www.crossplane.io/)
 - [OpenFaaS- deploy serverless functions and existing code to Kubernetes](https://www.openfaas.com/)
