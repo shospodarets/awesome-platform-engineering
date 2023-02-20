@@ -37,6 +37,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Storybook](https://storybook.js.org/)
 - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
 - [Customize Create React App config](https://github.com/dilanx/craco)
+- [micro-lc - the micro-frontend orchestrator.](https://micro-lc.io/docs)
 
 ## Tooling— Feature flags, environments and change management
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
@@ -63,6 +64,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Checkmarx security testing](https://checkmarx.com/)
 - [Checkov Policy-as-code](https://www.checkov.io/)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
+- [Rönd - A lightweight container for distributed security policy evaluation](https://rond-authz.io/)
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
@@ -89,6 +91,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
+- [kube-green - A K8s operator to reduce CO2 footprint of your clusters](https://kube-green.dev/)
 
 
 ## YouTube channels and Videos
@@ -112,8 +115,10 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering at Palo Alto Networks](https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa)
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
 - [Create Preview Environments with Terraform, GitHub Actions, and Vercel](https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel)
+- [The Internal Developer Platform Revolution: what every CTO should know](https://blog.mia-platform.eu/en/the-internal-developer-platform-revolution)
 
 ## Blogs and media platforms
+- [Mia-Platform Blog](https://blog.mia-platform.eu/en)
 - [Platform Engineering](https://platformengineering.org)
 - [Internal Developer Platform](https://internaldeveloperplatform.org)
 - [The New Stack](https://thenewstack.io/)
