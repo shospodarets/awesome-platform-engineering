@@ -97,6 +97,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering as a (Community)](https://www.youtube.com/watch?v=4N2ywun-wTE&ab_channel=GOTOConferences)
 - [Simon Sinek: How to start a cultural transformation?](https://www.youtube.com/watch?v=zClAdLw4yRI&ab_channel=DenkProducties) - A brilliant video on how to find a pilot team and create a demand.
 - [Platform Engineering: Why and How to start](https://youtube.com/watch?v=g_gHnBcdov8&feature=shares)
+- [Is Kubernetes Too Complicated? How About ClickOps With Qovery?](https://www.youtube.com/watch?v=EznBV1km580&ab_channel=DevOpsToolkit)
 
 ## Articles
 - [What Is Platform Engineering? Role, Principles & Benefits](https://spacelift.io/blog/what-is-platform-engineering)
@@ -107,6 +108,7 @@ A curated list of tools and resources for Platform Engineering.
 - [The 10 Platform Engineering Tools To Use in 2022](https://medium.com/@rphilogene/the-10-platform-engineering-tools-to-use-in-2022-c2cbf2561f77)
 - [Platform Engineering at Palo Alto Networks](https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa)
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
+- [Create Preview Environments with Terraform, GitHub Actions, and Vercel](https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel)
 
 ## Blogs and media platforms
 - [Platform Engineering](https://platformengineering.org)
