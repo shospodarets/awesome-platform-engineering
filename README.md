@@ -8,7 +8,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Development Portal and documentation](#tooling-development-portal-and-documentation)
 - [Tooling— Microservices](#tooling-microservices)
 - [Tooling— Frontend](#tooling-frontend)
-- [Tooling— Feature flags and change management](#tooling-feature-flags-and-change-management)
+- [Tooling— Feature flags, environments and change management](#tooling-feature-flags-environments-and-change-management)
 - [Tooling— Infrastructure and Artifacts Management](#tooling-infrastructure-and-artifacts-management)
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
@@ -38,13 +38,16 @@ A curated list of tools and resources for Platform Engineering.
 - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
 - [Customize Create React App config](https://github.com/dilanx/craco)
 
-## Tooling— Feature flags and change management
+## Tooling— Feature flags, environments and change management
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
 - [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
-- [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
+- [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
+- [Bunnyshell- production replica environments for dev, QA and Staging](https://www.bunnyshell.com/)
+- [Gitpod- cloud development environments](https://www.gitpod.io/)
+- [okteto- spin up dev and preview environments](https://www.okteto.com/)
 
 ## Tooling— Infrastructure and Artifacts Management
 - [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
