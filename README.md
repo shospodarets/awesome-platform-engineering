@@ -133,3 +133,4 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering list](https://github.com/toptechevangelist/awesome-platform-engineering)
 - [The 12 Platform Challenges](https://www.syntasso.io/post/the-12-platform-challenges-of-christmas)
 - [DevSecOps resources and tooling](https://github.com/TaptuIT/awesome-devsecops/)
+- [Architecture- Cloud Design Patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
