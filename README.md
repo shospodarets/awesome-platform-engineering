@@ -26,6 +26,7 @@ A curated list of tools and resources for Platform Engineering.
 ## Tooling— Development Portal and documentation
 - [Backstage- open-source Internal Development Portal](https://backstage.io/)
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
+- [MkDocs- documentation with Markdown](https://www.mkdocs.org/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
 
 ## Tooling— Microservices
