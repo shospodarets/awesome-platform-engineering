@@ -79,7 +79,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Quality and Testing
 - [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
-- [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://sentry.io/welcome/)
+- [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://github.com/atinfo/awesome-test-automation)
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
