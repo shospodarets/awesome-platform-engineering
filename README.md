@@ -48,6 +48,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Upgrade React applications](https://github.com/reactjs/react-codemod)
 - [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
 - [Bunnyshell- production replica environments for dev, QA and Staging](https://www.bunnyshell.com/)
+- [LocalStack- A fully functional local AWS cloud stack](https://github.com/localstack/localstack)
 - [Gitpod- cloud development environments](https://www.gitpod.io/)
 - [okteto- spin up dev and preview environments](https://www.okteto.com/)
 
