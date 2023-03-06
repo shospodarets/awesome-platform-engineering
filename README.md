@@ -65,6 +65,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Semgrep security simple static analysis](https://semgrep.dev/)
 - [Checkmarx security testing](https://checkmarx.com/)
 - [Checkov Policy-as-code](https://www.checkov.io/)
+- [kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark](https://github.com/aquasecurity/kube-bench)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 
 ## Tooling— Kubernetes, PAAS and Cloud services
