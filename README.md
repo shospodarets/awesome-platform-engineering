@@ -15,6 +15,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
 - [Tooling— Quality and Testing](#tooling-quality-and-testing)
 - [Tooling— Observability and Cost Optimization](#tooling-observability-and-cost-optimization)
+- [Tooling— Authentication and Authorization](#tooling-authentication-and-authorization)
 
 - [YouTube channels and Videos](#youtube-channels-and-videos)
 - [Articles](#articles)
@@ -90,6 +91,14 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
+
+## Tooling— Authentication and Authorization
+- [CAS- Central Authentication Service](https://github.com/apereo/cas)
+- [Casdoor- IAM/SSO platform with web UI](https://github.com/casdoor/casdoor)
+- [SuperTokens- Open Source User Authentication](https://github.com/supertokens/supertokens-core)
+- [Ory Keto- Open-source implementation of "Zanzibar: Google's Authorization System"](https://github.com/ory/keto)
+- [Topaz- Combining the best of OPA and Zanzibar](https://github.com/aserto-dev/topaz)
+- [Permify- open-source authorization service](https://github.com/Permify/permify)
 
 
 ## YouTube channels and Videos
