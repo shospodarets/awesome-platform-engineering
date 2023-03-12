@@ -29,7 +29,8 @@ A curated list of tools and resources for Platform Engineering.
 - [Docusaurus- create simple versioned doc sites](https://jamstack.org/generators/docusaurus/)
 - [MkDocs- documentation with Markdown](https://www.mkdocs.org/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
-
+- [Port- A No-Code Developer Portal](https://getport.io/)
+ 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
 - [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
@@ -124,6 +125,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering at Palo Alto Networks](https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa)
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
 - [Create Preview Environments with Terraform, GitHub Actions, and Vercel](https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel)
+- [Guide To Internal Developer Portals](https://www.getport.io/blog/guide-to-internal-developer-portals)
 
 ## Blogs and media platforms
 - [Platform Engineering](https://platformengineering.org)
@@ -132,6 +134,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Resources about Internal Platform teams and products](https://internalplatforms.com)
 - [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
 - [InfoQ Platform Engineering Articles](https://www.infoq.com/platformengineering/)
+- [Port Blog](https://www.getport.io/blog)
 
 ## Newsletters, Chats and Podcasts
 - [Platform weekly](https://platformweekly.com/)
