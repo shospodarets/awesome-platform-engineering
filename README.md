@@ -2,7 +2,7 @@
 
 # [Awesome Platform Engineering](https://shospodarets.github.io/awesome-platform-engineering/)
 
-A curated list of tools and resources for Platform Engineering.
+A curated list of tools and resources for Platform Engineering. Based on [Platform version 1.2.3](https://hospodarets.com/platform-engineering-talk)
 
 ## Contents
 - [Tooling— Development Portal and documentation](#tooling-development-portal-and-documentation)
