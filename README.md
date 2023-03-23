@@ -40,6 +40,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Storybook](https://storybook.js.org/)
 - [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
 - [Customize Create React App config](https://github.com/dilanx/craco)
+- [micro-lc- the micro-frontend orchestrator](https://github.com/micro-lc/micro-lc/)
 
 ## Tooling— Feature flags, environments and change management
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
@@ -94,6 +95,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
+- [kube-green- An operator to reduce CO2 footprint of your clusters](https://github.com/kube-green/kube-green)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
@@ -126,6 +128,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
 - [Create Preview Environments with Terraform, GitHub Actions, and Vercel](https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel)
 - [Guide To Internal Developer Portals](https://www.getport.io/blog/guide-to-internal-developer-portals)
+- [The Internal Developer Platform Revolution: what every CTO should know](https://blog.mia-platform.eu/en/the-internal-developer-platform-revolution)
 
 ## Blogs and media platforms
 - [Platform Engineering](https://platformengineering.org)
@@ -135,6 +138,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
 - [InfoQ Platform Engineering Articles](https://www.infoq.com/platformengineering/)
 - [Port Blog](https://www.getport.io/blog)
+- [Mia-Platform Blog](https://blog.mia-platform.eu/en)
 
 ## Newsletters, Chats and Podcasts
 - [Platform weekly](https://platformweekly.com/)
