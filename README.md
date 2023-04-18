@@ -94,6 +94,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
+- [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/) 
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
