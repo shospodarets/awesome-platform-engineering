@@ -1,3 +1,5 @@
 /site
 /docs
 .idea
+
+node_modules

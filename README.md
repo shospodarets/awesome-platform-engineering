@@ -30,7 +30,7 @@ A curated list of tools and resources for Platform Engineering.
 - [MkDocs- documentation with Markdown](https://www.mkdocs.org/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
 - [Port- A No-Code Developer Portal](https://getport.io/)
- 
+
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
 - [Create a service template in Backstage](https://www.youtube.com/watch?v=VIzrTpOHh9w&ab_channel=R%C3%BCdigerWeritz)
@@ -46,7 +46,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
-- [Upgrade React applications](https://github.com/reactjs/react-codemod)
+- [Upgrade JavaScript or TypeScript codebases](https://github.com/facebook/jscodeshift)
 - [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
 - [Bunnyshell- production replica environments for dev, QA and Staging](https://www.bunnyshell.com/)
 - [LocalStack- A fully functional local AWS cloud stack](https://github.com/localstack/localstack)
