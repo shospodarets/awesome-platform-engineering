@@ -63,8 +63,9 @@ A curated list of tools and resources for Platform Engineering.
 - [Verdaccio- a simple, zero-config npm registry](https://github.com/verdaccio/verdaccio)
 
 ## Tooling— Security and Policies
+- [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
+- [KICS by Checkmarx- detect security vulnerabilities, compliance issues, and infrastructure misconfigurations](https://github.com/Checkmarx/kics)
 - [Semgrep security simple static analysis](https://semgrep.dev/)
-- [Checkmarx security testing](https://checkmarx.com/)
 - [Checkov Policy-as-code](https://www.checkov.io/)
 - [kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark](https://github.com/aquasecurity/kube-bench)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
@@ -94,7 +95,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
-- [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/) 
+- [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
