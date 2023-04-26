@@ -13,7 +13,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Tooling— Security and Policies](#tooling-security-and-policies)
 - [Tooling— Kubernetes, PAAS and Cloud services](#tooling-kubernetes-paas-and-cloud-services)
 - [Tooling— Service mesh, API Gateway and App Proxies](#tooling-service-mesh-api-gateway-and-app-proxies)
-- [Tooling— Quality and Testing](#tooling-quality-and-testing)
+- [Tooling— Testing and Metrics](#tooling-testing-and-metrics)
 - [Tooling— Observability and Cost Optimization](#tooling-observability-and-cost-optimization)
 - [Tooling— Authentication and Authorization](#tooling-authentication-and-authorization)
 
@@ -83,9 +83,10 @@ A curated list of tools and resources for Platform Engineering.
 - [Kong- API Gateway and Service Connectivity Platform](https://konghq.com/)
 - [Traefik- Cloud Native Application Proxy](https://traefik.io/)
 
-## Tooling— Quality and Testing
+## Tooling— Testing and Metrics
 - [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
 - [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://github.com/atinfo/awesome-test-automation)
+- [Swarmia- tools to gather and improve engineering and DORA metrics](https://www.swarmia.com/product/objections/)
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
