@@ -64,6 +64,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Security and Policies
 - [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
+- [tfsec- Terraform code security scanner](https://github.com/aquasecurity/tfsec)
 - [KICS by Checkmarx- detect security vulnerabilities, compliance issues, and infrastructure misconfigurations](https://github.com/Checkmarx/kics)
 - [Semgrep security simple static analysis](https://semgrep.dev/)
 - [Checkov Policy-as-code](https://www.checkov.io/)
