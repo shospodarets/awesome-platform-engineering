@@ -38,8 +38,12 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Frontend
 - [Storybook](https://storybook.js.org/)
-- [Create React apps self-service](https://create-react-app.dev/docs/custom-templates/) - Provide own app templates.
-- [Customize Create React App config](https://github.com/dilanx/craco)
+- [Radix UI- unstyled, accessible components](https://www.radix-ui.com/)
+- [daisyUI- Tailwind CSS based components](https://daisyui.com/)
+- [Ant Design- An enterprise-class UI design language and React UI library](https://github.com/ant-design/ant-design)
+- [commander.js- nNode.js CLI development framework](https://github.com/tj/commander.js/)
+- [Capacitor- cross-platform web apps building framework](https://github.com/ionic-team/capacitor)
+- [Design Tokens Figma plugin- export Figma styles and custom tokens](https://www.figma.com/community/plugin/888356646278934516/Design-Tokens)
 
 ## Tooling— Feature flags, environments and change management
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
