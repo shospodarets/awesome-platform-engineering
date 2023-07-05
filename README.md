@@ -146,12 +146,14 @@ A curated list of tools and resources for Platform Engineering.
 - [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
 - [InfoQ Platform Engineering Articles](https://www.infoq.com/platformengineering/)
 - [Port Blog](https://www.getport.io/blog)
+- [Senora's Blog](https://www.senora.dev)
 
 ## Newsletters, Chats and Podcasts
 - [Platform weekly](https://platformweekly.com/)
 - [Platformengineering.org Slack](https://platformengineering.org/slack-rd)
 - [What's Platform Engineering? And How Does It Support DevOps?](https://www.listennotes.com/podcasts/the-new-stack/whats-platform-engineering-uoN5mXizUpP/)
 - [The New Stack Podcast](https://www.listennotes.com/podcasts/the-new-stack-podcast-the-new-stack-2tdxfCmwZr6/)
+- [Platform Engineering Weekly ⚡ by Senora.dev](https://senora.beehiiv.com)
 
 ## Miscellaneous and Related
 - [Cloud Native Interactive Landscape](https://landscape.cncf.io/)
