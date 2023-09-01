@@ -94,6 +94,7 @@ A curated list of tools and resources for Platform Engineering.
 - [ddosify- performance testing platform](https://github.com/ddosify/ddosify)
 - [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://github.com/atinfo/awesome-test-automation)
 - [Swarmia- tools to gather and improve engineering and DORA metrics](https://www.swarmia.com/product/objections/)
+- [Hydra Lab: build your intelligent cloud testing system](https://github.com/microsoft/HydraLab)
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
