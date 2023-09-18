@@ -126,6 +126,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Simon Sinek: How to start a cultural transformation?](https://www.youtube.com/watch?v=zClAdLw4yRI&ab_channel=DenkProducties) - A brilliant video on how to find a pilot team and create a demand.
 - [Platform Engineering: Why and How to start](https://youtube.com/watch?v=g_gHnBcdov8&feature=shares)
 - [Is Kubernetes Too Complicated? How About ClickOps With Qovery?](https://www.youtube.com/watch?v=EznBV1km580&ab_channel=DevOpsToolkit)
+- [GitHub as a Platform Engineering Platform](https://www.youtube.com/watch?v=B4ra4MWiZck)
 
 ## Articles
 - [What Is Platform Engineering? Role, Principles & Benefits](https://spacelift.io/blog/what-is-platform-engineering)
