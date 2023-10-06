@@ -30,6 +30,7 @@ A curated list of tools and resources for Platform Engineering.
 - [MkDocs- documentation with Markdown](https://www.mkdocs.org/)
 - [API docs with Swagger- OpenAPI Specification](https://swagger.io/specification/)
 - [Port- A No-Code Developer Portal](https://getport.io/)
+- [Stoplight - API Design, Testing, and Documentation](https://stoplight.io/)
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
