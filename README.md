@@ -67,6 +67,7 @@ A curated list of tools and resources for Platform Engineering.
 - [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - [Artpie- open source artifact management alternative for Artifactory, Nexus etc.](https://github.com/artipie/artipie)
 - [Verdaccio- a simple, zero-config npm registry](https://github.com/verdaccio/verdaccio)
+- [Digger - Open Source Infratructure as Code management tool](https://www.github.com/diggerhq/digger)
 
 ## Tooling— Security and Policies
 - [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
