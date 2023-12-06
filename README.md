@@ -77,6 +77,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Checkov Policy-as-code](https://www.checkov.io/)
 - [kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark](https://github.com/aquasecurity/kube-bench)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
+- [Secure the software supply chain for OPA policies](https://github.com/opcr-io/policy)
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
