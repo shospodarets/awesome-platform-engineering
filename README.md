@@ -86,6 +86,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenFaaS- deploy serverless functions and existing code to Kubernetes](https://www.openfaas.com/)
 - [Portainer- container management for K8S and more](https://www.portainer.io/)
 - [Argonaut - Deploy apps and infrastructure to your cloud](https://www.argonaut.dev/)
+- [KusionStack- Open Tech Stack to build Internal Developer Platform](https://kusionstack.io/)
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [Istio- open source service mesh](https://istio.io/)
