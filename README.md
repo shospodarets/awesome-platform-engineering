@@ -100,8 +100,8 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
-- [Jaeger CNCF- a Distributed Tracing Platform](https://github.com/fluent/fluentd)
-- [Fluentd CNCF: Unified Logging Layer](https://github.com/jaegertracing/jaeger)
+- [Jaeger CNCF- a Distributed Tracing Platform](https://github.com/jaegertracing/jaeger)
+- [Fluentd CNCF: Unified Logging Layer](https://github.com/fluent/fluentd)
 - [Sentry- error monitoring](https://sentry.io/)
 - [Infracost- cost estimates for Terraform](https://github.com/infracost/infracost)
 - [OpenCost — open source cost monitoring tool for Kubernetes](https://github.com/opencost/opencost)
