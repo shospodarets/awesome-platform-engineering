@@ -67,6 +67,7 @@ A curated list of tools and resources for Platform Engineering.
 - [AWS Proton- Self-service infrastructure templates](https://aws.amazon.com/proton/)
 - [Artpie- open source artifact management alternative for Artifactory, Nexus etc.](https://github.com/artipie/artipie)
 - [Verdaccio- a simple, zero-config npm registry](https://github.com/verdaccio/verdaccio)
+- [Digger - Open Source Infratructure as Code management tool](https://www.github.com/diggerhq/digger)
 
 ## Tooling— Security and Policies
 - [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
@@ -76,6 +77,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Checkov Policy-as-code](https://www.checkov.io/)
 - [kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark](https://github.com/aquasecurity/kube-bench)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
+- [Secure the software supply chain for OPA policies](https://github.com/opcr-io/policy)
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
@@ -84,6 +86,8 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenFaaS- deploy serverless functions and existing code to Kubernetes](https://www.openfaas.com/)
 - [Portainer- container management for K8S and more](https://www.portainer.io/)
 - [Argonaut - Deploy apps and infrastructure to your cloud](https://www.argonaut.dev/)
+- [KusionStack- Open Tech Stack to build Internal Developer Platform](https://kusionstack.io/)
+- [Radius - Cloud-native application platform](https://radapp.io/)
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [Istio- open source service mesh](https://istio.io/)
