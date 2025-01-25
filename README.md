@@ -121,6 +121,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Ory Keto- Open-source implementation of "Zanzibar: Google's Authorization System"](https://github.com/ory/keto)
 - [Topaz- Combining the best of OPA and Zanzibar](https://github.com/aserto-dev/topaz)
 - [Permify- open-source authorization service](https://github.com/Permify/permify)
+- [Permit.io - Authorization as a service with a no-code UI](https://permit.io/)
 
 
 ## YouTube channels and Videos
