@@ -89,6 +89,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Argonaut - Deploy apps and infrastructure to your cloud](https://www.argonaut.dev/)
 - [KusionStack- Open Tech Stack to build Internal Developer Platform](https://kusionstack.io/)
 - [Radius - Cloud-native application platform](https://radapp.io/)
+- [Meshery - A open source cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud)](https://meshery.io)
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [Istio- open source service mesh](https://istio.io/)
