@@ -1,0 +1,918 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A curated list of platform solutions, tools, practices and resources for Platform Engineering.">
+      
+      
+        <meta name="author" content="Serg Hospodarets">
+      
+      
+        <link rel="canonical" href="https://hospodarets.com/awesome-platform-engineering/">
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.8">
+    
+    
+      
+        <title>Awesome Platform Engineering</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.8608ea7d.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-SNWZL73P7L"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-SNWZL73P7L",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-SNWZL73P7L",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#awesome-platform-engineering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Awesome Platform Engineering" class="md-header__button md-logo" aria-label="Awesome Platform Engineering" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Awesome Platform Engineering
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Awesome Platform Engineering
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/shospodarets/awesome-platform-engineering" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shospodarets/awesome-platform-engineering
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Awesome Platform Engineering" class="md-nav__button md-logo" aria-label="Awesome Platform Engineering" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Awesome Platform Engineering
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/shospodarets/awesome-platform-engineering" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    shospodarets/awesome-platform-engineering
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Awesome Platform Engineering
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Awesome Platform Engineering
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-development-portal-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Development Portal and documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Microservices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Frontend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-feature-flags-environments-and-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Feature flags, environments and change management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-infrastructure-and-artifacts-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Infrastructure and Artifacts Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-security-and-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Security and Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-kubernetes-paas-and-cloud-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Kubernetes, PAAS and Cloud services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-service-mesh-api-gateway-and-app-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Service mesh, API Gateway and App Proxies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-testing-and-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Testing and Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-observability-and-cost-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Observability and Cost Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Authentication and Authorization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube-channels-and-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      YouTube channels and Videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Articles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blogs-and-media-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs and media platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newsletters-chats-and-podcasts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newsletters, Chats and Podcasts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-and-related" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous and Related
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-development-portal-and-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Development Portal and documentation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-microservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Microservices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-frontend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Frontend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-feature-flags-environments-and-change-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Feature flags, environments and change management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-infrastructure-and-artifacts-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Infrastructure and Artifacts Management
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-security-and-policies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Security and Policies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-kubernetes-paas-and-cloud-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Kubernetes, PAAS and Cloud services
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-service-mesh-api-gateway-and-app-proxies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Service mesh, API Gateway and App Proxies
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-testing-and-metrics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Testing and Metrics
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-observability-and-cost-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Observability and Cost Optimization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tooling-authentication-and-authorization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tooling— Authentication and Authorization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#youtube-channels-and-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      YouTube channels and Videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#articles" class="md-nav__link">
+    <span class="md-ellipsis">
+      Articles
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#blogs-and-media-platforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blogs and media platforms
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#newsletters-chats-and-podcasts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Newsletters, Chats and Podcasts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#miscellaneous-and-related" class="md-nav__link">
+    <span class="md-ellipsis">
+      Miscellaneous and Related
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<p><a href="https://github.com/sindresorhus/awesome"><img alt="Awesome badge" src="https://awesome.re/badge.svg" /></a></p>
+<h1 id="awesome-platform-engineering"><a href="https://shospodarets.github.io/awesome-platform-engineering/">Awesome Platform Engineering</a></h1>
+<p>A curated list of tools and resources for Platform Engineering.</p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#tooling-development-portal-and-documentation">Tooling— Development Portal and documentation</a></li>
+<li><a href="#tooling-microservices">Tooling— Microservices</a></li>
+<li><a href="#tooling-frontend">Tooling— Frontend</a></li>
+<li><a href="#tooling-feature-flags-environments-and-change-management">Tooling— Feature flags, environments and change management</a></li>
+<li><a href="#tooling-infrastructure-and-artifacts-management">Tooling— Infrastructure and Artifacts Management</a></li>
+<li><a href="#tooling-security-and-policies">Tooling— Security and Policies</a></li>
+<li><a href="#tooling-kubernetes-paas-and-cloud-services">Tooling— Kubernetes, PAAS and Cloud services</a></li>
+<li><a href="#tooling-service-mesh-api-gateway-and-app-proxies">Tooling— Service mesh, API Gateway and App Proxies</a></li>
+<li><a href="#tooling-testing-and-metrics">Tooling— Testing and Metrics</a></li>
+<li><a href="#tooling-observability-and-cost-optimization">Tooling— Observability and Cost Optimization</a></li>
+<li>
+<p><a href="#tooling-authentication-and-authorization">Tooling— Authentication and Authorization</a></p>
+</li>
+<li>
+<p><a href="#youtube-channels-and-videos">YouTube channels and Videos</a></p>
+</li>
+<li><a href="#articles">Articles</a></li>
+<li><a href="#blogs-and-media-platforms">Blogs and media platforms</a></li>
+<li><a href="#newsletters-chats-and-podcasts">Newsletters, Chats and Podcasts</a></li>
+<li><a href="#miscellaneous-and-related">Miscellaneous and Related</a></li>
+</ul>
+<h2 id="tooling-development-portal-and-documentation">Tooling— Development Portal and documentation</h2>
+<ul>
+<li><a href="https://backstage.io/">Backstage- open-source Internal Development Portal</a></li>
+<li><a href="https://jamstack.org/generators/docusaurus/">Docusaurus- create simple versioned doc sites</a></li>
+<li><a href="https://www.mkdocs.org/">MkDocs- documentation with Markdown</a></li>
+<li><a href="https://swagger.io/specification/">API docs with Swagger- OpenAPI Specification</a></li>
+<li><a href="https://getport.io/">Port- A No-Code Developer Portal</a></li>
+<li><a href="https://stoplight.io/">Stoplight - API Design, Testing, and Documentation</a></li>
+<li><a href="https://roadie.io">Roadie - SaaS-based Internal Developer Portal</a></li>
+</ul>
+<h2 id="tooling-microservices">Tooling— Microservices</h2>
+<ul>
+<li><a href="https://www.jhipster.tech/">JHipster for microservices creation and integration at scale</a></li>
+<li><a href="https://www.youtube.com/watch?v=VIzrTpOHh9w&amp;ab_channel=R%C3%BCdigerWeritz">Create a service template in Backstage</a></li>
+<li><a href="https://www.waypointproject.io/">Waypoint: Create, build and Deploy apps across platform</a></li>
+</ul>
+<h2 id="tooling-frontend">Tooling— Frontend</h2>
+<ul>
+<li><a href="https://storybook.js.org/">Storybook</a></li>
+<li><a href="https://www.radix-ui.com/">Radix UI- unstyled, accessible components</a></li>
+<li><a href="https://daisyui.com/">daisyUI- Tailwind CSS based components</a></li>
+<li><a href="https://github.com/ant-design/ant-design">Ant Design- An enterprise-class UI design language and React UI library</a></li>
+<li><a href="https://github.com/tj/commander.js/">commander.js- nNode.js CLI development framework</a></li>
+<li><a href="https://github.com/ionic-team/capacitor">Capacitor- cross-platform web apps building framework</a></li>
+<li><a href="https://www.figma.com/community/plugin/888356646278934516/Design-Tokens">Design Tokens Figma plugin- export Figma styles and custom tokens</a></li>
+</ul>
+<h2 id="tooling-feature-flags-environments-and-change-management">Tooling— Feature flags, environments and change management</h2>
+<ul>
+<li><a href="https://github.com/open-feature#welcome-to-the-openfeature-project-">OpenFeature - community-developed specification to standardise feature flag management</a></li>
+<li><a href="https://launchdarkly.com/">Launchdarkly- feature flags paid service</a></li>
+<li><a href="https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/">Git Guide: Generate A Changelog From Your Git Commit Messages</a></li>
+<li><a href="https://github.com/renovatebot/renovate">Update NPM, pip, Gem etc. dependencies</a></li>
+<li><a href="https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application">Upgrade microservices</a></li>
+<li><a href="https://github.com/facebook/jscodeshift">Upgrade JavaScript or TypeScript codebases</a></li>
+<li><a href="https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/">Git Qovery: PR/Commit Preview Environments Platform (paid)</a></li>
+<li><a href="https://www.bunnyshell.com/">Bunnyshell- production replica environments for dev, QA and Staging</a></li>
+<li><a href="https://github.com/localstack/localstack">LocalStack- A fully functional local AWS cloud stack</a></li>
+<li><a href="https://www.gitpod.io/">Gitpod- cloud development environments</a></li>
+<li><a href="https://www.okteto.com/">okteto- spin up dev and preview environments</a></li>
+</ul>
+<h2 id="tooling-infrastructure-and-artifacts-management">Tooling— Infrastructure and Artifacts Management</h2>
+<ul>
+<li><a href="https://github.com/GoogleCloudPlatform/terraformer">Terraformer- generate terraform files from existing infrastructure</a></li>
+<li><a href="https://github.com/gruntwork-io/terragrunt">Terragrunt for deployment environments (dev/staging/prod) and other features</a></li>
+<li><a href="https://www.runatlantis.io/">Atlantis - Terraform Pull Request Automation</a></li>
+<li><a href="https://www.jenkins.io/doc/book/pipeline-as-code/">Jenkins Pipelines as Code</a></li>
+<li><a href="https://aws.amazon.com/proton/">AWS Proton- Self-service infrastructure templates</a></li>
+<li><a href="https://github.com/artipie/artipie">Artpie- open source artifact management alternative for Artifactory, Nexus etc.</a></li>
+<li><a href="https://github.com/verdaccio/verdaccio">Verdaccio- a simple, zero-config npm registry</a></li>
+<li><a href="https://www.github.com/diggerhq/digger">Digger - Open Source Infratructure as Code management tool</a></li>
+</ul>
+<h2 id="tooling-security-and-policies">Tooling— Security and Policies</h2>
+<ul>
+<li><a href="https://github.com/tenable/terrascan">terrascan- detect compliance and security violations in IaC/Terraform</a></li>
+<li><a href="https://github.com/aquasecurity/tfsec">tfsec- Terraform code security scanner</a></li>
+<li><a href="https://github.com/Checkmarx/kics">KICS by Checkmarx- detect security vulnerabilities, compliance issues, and infrastructure misconfigurations</a></li>
+<li><a href="https://semgrep.dev/">Semgrep security simple static analysis</a></li>
+<li><a href="https://www.checkov.io/">Checkov Policy-as-code</a></li>
+<li><a href="https://github.com/aquasecurity/kube-bench">kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark</a></li>
+<li><a href="https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide">Terraform Guardrails with OPA</a></li>
+<li><a href="https://github.com/opcr-io/policy">Secure the software supply chain for OPA policies</a></li>
+</ul>
+<h2 id="tooling-kubernetes-paas-and-cloud-services">Tooling— Kubernetes, PAAS and Cloud services</h2>
+<ul>
+<li><a href="https://dokku.com/">Dokku- Open source PAAS alternative to Heroku</a></li>
+<li><a href="https://www.crossplane.io/">Crossplane- control plane framework using K8s custom resources</a></li>
+<li><a href="https://kubevela.io/">KubeVela- create cloud resources using K8s customer resources</a></li>
+<li><a href="https://www.openfaas.com/">OpenFaaS- deploy serverless functions and existing code to Kubernetes</a></li>
+<li><a href="https://www.portainer.io/">Portainer- container management for K8S and more</a></li>
+<li><a href="https://www.argonaut.dev/">Argonaut - Deploy apps and infrastructure to your cloud</a></li>
+<li><a href="https://kusionstack.io/">KusionStack- Open Tech Stack to build Internal Developer Platform</a></li>
+<li><a href="https://radapp.io/">Radius - Cloud-native application platform</a></li>
+<li><a href="https://meshery.io">Meshery - A open source cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud)</a></li>
+</ul>
+<h2 id="tooling-service-mesh-api-gateway-and-app-proxies">Tooling— Service mesh, API Gateway and App Proxies</h2>
+<ul>
+<li><a href="https://istio.io/">Istio- open source service mesh</a></li>
+<li><a href="https://konghq.com/">Kong- API Gateway and Service Connectivity Platform</a></li>
+<li><a href="https://traefik.io/">Traefik- Cloud Native Application Proxy</a></li>
+</ul>
+<h2 id="tooling-testing-and-metrics">Tooling— Testing and Metrics</h2>
+<ul>
+<li><a href="https://www.sonarsource.com/products/sonarqube/">SonarQube- continuous code quality inspection</a></li>
+<li><a href="https://github.com/grafana/k6">k6- performance/load testing tool</a></li>
+<li><a href="https://github.com/ddosify/ddosify">ddosify- performance testing platform</a></li>
+<li><a href="https://github.com/atinfo/awesome-test-automation">Awesome Test Automation- a list of test automation frameworks, tools etc.</a></li>
+<li><a href="https://www.swarmia.com/product/objections/">Swarmia- tools to gather and improve engineering and DORA metrics</a></li>
+<li><a href="https://github.com/microsoft/HydraLab">Hydra Lab: build your intelligent cloud testing system</a></li>
+</ul>
+<h2 id="tooling-observability-and-cost-optimization">Tooling— Observability and Cost Optimization</h2>
+<ul>
+<li><a href="https://www.netdata.cloud/">Netdata- Open-source infrastructure monitoring</a></li>
+<li><a href="https://github.com/jaegertracing/jaeger">Jaeger CNCF- a Distributed Tracing Platform</a></li>
+<li><a href="https://github.com/fluent/fluentd">Fluentd CNCF: Unified Logging Layer</a></li>
+<li><a href="https://sentry.io/">Sentry- error monitoring</a></li>
+<li><a href="https://github.com/infracost/infracost">Infracost- cost estimates for Terraform</a></li>
+<li><a href="https://github.com/opencost/opencost">OpenCost — open source cost monitoring tool for Kubernetes</a></li>
+<li><a href="https://github.com/apache/skywalking">Apache SkyWalking — Application Performance Monitoring</a></li>
+<li><a href="https://github.com/signoz/signoz">SigNoz- an open-source alternative to DataDog, NewRelic, etc.</a></li>
+<li><a href="https://grafana.com/oss/loki/">Loki - low cost open source logging; self-hosted or SaaS</a></li>
+<li><a href="https://middleware.io">Middleware - A Full-Stack Cloud Observability Platform</a></li>
+</ul>
+<h2 id="tooling-authentication-and-authorization">Tooling— Authentication and Authorization</h2>
+<ul>
+<li><a href="https://github.com/apereo/cas">CAS- Central Authentication Service</a></li>
+<li><a href="https://github.com/casdoor/casdoor">Casdoor- IAM/SSO platform with web UI</a></li>
+<li><a href="https://github.com/supertokens/supertokens-core">SuperTokens- Open Source User Authentication</a></li>
+<li><a href="https://github.com/ory/keto">Ory Keto- Open-source implementation of "Zanzibar: Google's Authorization System"</a></li>
+<li><a href="https://github.com/aserto-dev/topaz">Topaz- Combining the best of OPA and Zanzibar</a></li>
+<li><a href="https://github.com/Permify/permify">Permify- open-source authorization service</a></li>
+<li><a href="https://permit.io/">Permit.io - Authorization as a service with a no-code UI</a></li>
+</ul>
+<h2 id="youtube-channels-and-videos">YouTube channels and Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/@PlatformEngineering">Platform Engineering</a></li>
+<li><a href="https://www.youtube.com/watch?v=7yaiiQHNKpM&amp;list=PLYTh9n7QJnzS3bZ6bmoLaTaKPzhSmlnL1&amp;ab_channel=TeamTopologies">Team Topologies Platform Engineering Bundle</a></li>
+<li><a href="https://www.youtube.com/watch?app=desktop&amp;v=9_v77YiSGEY&amp;ab_channel=DevOpsToolkit">DevOps Is Dead! Long Live Platform Engineering! Did We Get Confused?</a></li>
+<li><a href="https://www.youtube.com/watch?v=b8YHCDMxqfg&amp;ab_channel=PlatformEngineering">Platform as a Product</a></li>
+<li><a href="https://www.youtube.com/watch?v=0uuOJ1gzcyE&amp;ab_channel=PlatformsandBeyond">What is Platform Engineering ?</a></li>
+<li><a href="https://www.youtube.com/watch?v=4N2ywun-wTE&amp;ab_channel=GOTOConferences">Platform Engineering as a (Community)</a></li>
+<li><a href="https://www.youtube.com/watch?v=zClAdLw4yRI&amp;ab_channel=DenkProducties">Simon Sinek: How to start a cultural transformation?</a> - A brilliant video on how to find a pilot team and create a demand.</li>
+<li><a href="https://youtube.com/watch?v=g_gHnBcdov8&amp;feature=shares">Platform Engineering: Why and How to start</a></li>
+<li><a href="https://www.youtube.com/watch?v=EznBV1km580&amp;ab_channel=DevOpsToolkit">Is Kubernetes Too Complicated? How About ClickOps With Qovery?</a></li>
+<li><a href="https://www.youtube.com/watch?v=B4ra4MWiZck">GitHub as a Platform Engineering Platform</a></li>
+</ul>
+<h2 id="articles">Articles</h2>
+<ul>
+<li><a href="https://spacelift.io/blog/what-is-platform-engineering">What Is Platform Engineering? Role, Principles &amp; Benefits</a></li>
+<li><a href="https://blog.container-solutions.com/how-to-design-an-internal-developer-platform">How to Design an Internal Developer Platform</a></li>
+<li><a href="https://thenewstack.io/a-platform-team-product-manager-determines-devops-success/">A Platform Team Product Manager Determines DevOps Success</a></li>
+<li><a href="https://medium.com/wise-engineering/platform-engineering-kpis-6a3215f0ee14">Platform Engineering KPIs</a></li>
+<li><a href="https://medium.com/contino-engineering/creating-your-internal-developer-platform-part-2-65ff217cecd6">Platform Engineering: Creating your Internal Developer Platform</a></li>
+<li><a href="https://medium.com/@rphilogene/the-10-platform-engineering-tools-to-use-in-2022-c2cbf2561f77">The 10 Platform Engineering Tools To Use in 2022</a></li>
+<li><a href="https://medium.com/engineering-at-palo-alto-networks/platform-engineering-at-palo-alto-networks-part-2-315bd7b0fbfa">Platform Engineering at Palo Alto Networks</a></li>
+<li><a href="https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888">Platform Engineering story from a CTO: WHY, WHAT, HOW</a></li>
+<li><a href="https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel">Create Preview Environments with Terraform, GitHub Actions, and Vercel</a></li>
+<li><a href="https://www.getport.io/blog/guide-to-internal-developer-portals">Guide To Internal Developer Portals</a></li>
+</ul>
+<h2 id="blogs-and-media-platforms">Blogs and media platforms</h2>
+<ul>
+<li><a href="https://platformengineering.org">Platform Engineering</a></li>
+<li><a href="https://internaldeveloperplatform.org">Internal Developer Platform</a></li>
+<li><a href="https://thenewstack.io/">The New Stack</a></li>
+<li><a href="https://internalplatforms.com">Resources about Internal Platform teams and products</a></li>
+<li><a href="https://humanitec.com/blog">Humanitec (Platform Engineering) Blog</a></li>
+<li><a href="https://www.infoq.com/platformengineering/">InfoQ Platform Engineering Articles</a></li>
+<li><a href="https://www.getport.io/blog">Port Blog</a></li>
+</ul>
+<h2 id="newsletters-chats-and-podcasts">Newsletters, Chats and Podcasts</h2>
+<ul>
+<li><a href="https://platformweekly.com/">Platform weekly</a></li>
+<li><a href="https://platformengineering.org/slack-rd">Platformengineering.org Slack</a></li>
+<li><a href="https://www.listennotes.com/podcasts/the-new-stack/whats-platform-engineering-uoN5mXizUpP/">What's Platform Engineering? And How Does It Support DevOps?</a></li>
+<li><a href="https://www.listennotes.com/podcasts/the-new-stack-podcast-the-new-stack-2tdxfCmwZr6/">The New Stack Podcast</a></li>
+</ul>
+<h2 id="miscellaneous-and-related">Miscellaneous and Related</h2>
+<ul>
+<li><a href="https://landscape.cncf.io/">Cloud Native Interactive Landscape</a></li>
+<li><a href="https://platformengineering.org/platform-tooling">Platformengineering.org tooling list</a></li>
+<li><a href="https://github.com/toptechevangelist/awesome-platform-engineering">Platform Engineering list</a></li>
+<li><a href="https://www.syntasso.io/post/the-12-platform-challenges-of-christmas">The 12 Platform Challenges</a></li>
+<li><a href="https://github.com/TaptuIT/awesome-devsecops/">DevSecOps resources and tooling</a></li>
+<li><a href="https://learn.microsoft.com/en-us/azure/architecture/patterns/">Architecture- Cloud Design Patterns</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/shospodarets" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/shospodarets" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/shospodarets/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+    
+  </body>
+</html>
