@@ -105,6 +105,9 @@ A curated list of tools and resources for Platform Engineering.
 - [Hydra Lab: build your intelligent cloud testing system](https://github.com/microsoft/HydraLab)
 
 ## Tooling— Observability and Cost Optimization
+- [Sync Computing](https://synccomputing.com/)
+    - [Gradient by Sync](https://docs.synccomputing.com/)- ML-powered Databricks cluster management that lets you cut costs by 50% while meeting your SLAs.
+    - [Free Databricks workplace health check](https://landing.synccomputing.com/health-check) - Discover your most expensive jobs, identify candidates for EBS, Photon, or Autoscaling optimizations, calculate potential savings, and more.
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
 - [Jaeger CNCF- a Distributed Tracing Platform](https://github.com/jaegertracing/jaeger)
 - [Fluentd CNCF: Unified Logging Layer](https://github.com/fluent/fluentd)
