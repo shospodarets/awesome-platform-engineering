@@ -70,6 +70,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Verdaccio- a simple, zero-config npm registry](https://github.com/verdaccio/verdaccio)
 - [Digger - Open Source Infratructure as Code management tool](https://www.github.com/diggerhq/digger)
 - [Terrateam - GitOps-first open-source IaC automation for Terraform, OpenTofu, and more](https://github.com/terrateamio/terrateam)
+- [Terramate - Infrastructure as Code collaboration, visibility and observability platform](https://terramate.io)
 
 ## Tooling— Security and Policies
 - [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
@@ -90,6 +91,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Argonaut - Deploy apps and infrastructure to your cloud](https://www.argonaut.dev/)
 - [KusionStack- Open Tech Stack to build Internal Developer Platform](https://kusionstack.io/)
 - [Radius - Cloud-native application platform](https://radapp.io/)
+- [Meshery - A open source cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud)](https://meshery.io)
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [Istio- open source service mesh](https://istio.io/)
@@ -114,6 +116,8 @@ A curated list of tools and resources for Platform Engineering.
 - [Apache SkyWalking — Application Performance Monitoring](https://github.com/apache/skywalking)
 - [SigNoz- an open-source alternative to DataDog, NewRelic, etc.](https://github.com/signoz/signoz)
 - [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/)
+- [Middleware - A Full-Stack Cloud Observability Platform](https://middleware.io)
+- [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
@@ -122,6 +126,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Ory Keto- Open-source implementation of "Zanzibar: Google's Authorization System"](https://github.com/ory/keto)
 - [Topaz- Combining the best of OPA and Zanzibar](https://github.com/aserto-dev/topaz)
 - [Permify- open-source authorization service](https://github.com/Permify/permify)
+- [Permit.io - Authorization as a service with a no-code UI](https://permit.io/)
 
 
 ## YouTube channels and Videos
