@@ -87,6 +87,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenFaaS- deploy serverless functions and existing code to Kubernetes](https://www.openfaas.com/)
 - [Portainer- container management for K8S and more](https://www.portainer.io/)
 - [Argonaut - Deploy apps and infrastructure to your cloud](https://www.argonaut.dev/)
+- [Kube Foundry - Kubernetes operator that runs AI coding agents (Claude Code, Codex, Cursor, Gemini, OpenCode) in sandboxed pods](https://github.com/kube-foundry/kube-foundry)
 - [KusionStack- Open Tech Stack to build Internal Developer Platform](https://kusionstack.io/)
 - [Radius - Cloud-native application platform](https://radapp.io/)
 - [Meshery - A open source cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud)](https://meshery.io)
