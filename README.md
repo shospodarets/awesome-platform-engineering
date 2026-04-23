@@ -48,6 +48,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Design Tokens Figma plugin- export Figma styles and custom tokens](https://www.figma.com/community/plugin/888356646278934516/Design-Tokens)
 
 ## Tooling— Feature flags, environments and change management
+- [ConfigCat - Privacy-first feature flag service](https://configcat.com/)
 - [OpenFeature - community-developed specification to standardise feature flag management](https://github.com/open-feature#welcome-to-the-openfeature-project-)
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
 - [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
