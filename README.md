@@ -119,6 +119,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/)
 - [Middleware - A Full-Stack Cloud Observability Platform](https://middleware.io)
 - [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
+- [CostGoat - real-time cost visibility across cloud, AI agents, APIs and subscriptions](https://costgoat.com)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
