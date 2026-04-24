@@ -119,6 +119,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/)
 - [Middleware - A Full-Stack Cloud Observability Platform](https://middleware.io)
 - [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
+- [KubeStellar Console — AI-powered multi-cluster Kubernetes dashboard with real-time observability, CNCF integrations, and AI-guided operations. CNCF Sandbox project.](https://console.kubestellar.io)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
