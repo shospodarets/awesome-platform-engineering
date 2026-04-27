@@ -93,6 +93,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Radius - Cloud-native application platform](https://radapp.io/)
 - [Meshery - A open source cloud native manager that enables the design and management of all Kubernetes-based infrastructure and applications (multi-cloud)](https://meshery.io)
 - [vCluster - A open source project that helps you create virtual clusters](https://vcluster.sh/)
+- [KubeStellar Console - Multi-cluster Kubernetes dashboard with AI-powered operations and real-time observability](https://github.com/kubestellar/console)
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [Istio- open source service mesh](https://istio.io/)
