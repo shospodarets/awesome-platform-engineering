@@ -62,7 +62,6 @@ A curated list of tools and resources for Platform Engineering.
 - [okteto- spin up dev and preview environments](https://www.okteto.com/)
 
 ## Tooling— Infrastructure and Artifacts Management
-- [Terraformer- generate terraform files from existing infrastructure](https://github.com/GoogleCloudPlatform/terraformer)
 - [Terragrunt for deployment environments (dev/staging/prod) and other features](https://github.com/gruntwork-io/terragrunt)
 - [Atlantis - Terraform Pull Request Automation](https://www.runatlantis.io/)
 - [Jenkins Pipelines as Code](https://www.jenkins.io/doc/book/pipeline-as-code/)
