@@ -35,7 +35,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Roadie - SaaS-based Internal Developer Portal](https://roadie.io)
 
 ## Tooling— Internal Developer Platforms
-- [OpenChoreo - a complete, modular, open-source developer platform](https://openchoreo.dev/)
+- [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
