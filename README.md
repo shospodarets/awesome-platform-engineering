@@ -159,8 +159,8 @@ A curated list of tools and resources for Platform Engineering.
 ## Blogs and media platforms
 - [Platform Engineering](https://platformengineering.org)
 - [Internal Developer Platform](https://internaldeveloperplatform.org)
-- [Platform Engineering University](https://university.platformengineering.org) - Platform engineering courses and certifications
-- [Weave Intelligence](https://weaveintelligence.io) - Research and analyst firm covering platform engineering
+- [Platform Engineering University](https://university.platformengineering.org) - Platform engineering courses and certifications.
+- [Weave Intelligence](https://weaveintelligence.io) - Research and analyst firm covering platform engineering.
 - [The New Stack](https://thenewstack.io/)
 - [Resources about Internal Platform teams and products](https://internalplatforms.com)
 - [Humanitec (Platform Engineering) Blog](https://humanitec.com/blog)
@@ -180,4 +180,4 @@ A curated list of tools and resources for Platform Engineering.
 - [The 12 Platform Challenges](https://www.syntasso.io/post/the-12-platform-challenges-of-christmas)
 - [DevSecOps resources and tooling](https://github.com/TaptuIT/awesome-devsecops/)
 - [Architecture- Cloud Design Patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
-- [PlatformCon](https://platformcon.com) - The world's largest platform engineering conference
+- [PlatformCon](https://platformcon.com) - The world's largest platform engineering conference.
