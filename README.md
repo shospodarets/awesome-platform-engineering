@@ -35,6 +35,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Roadie - SaaS-based Internal Developer Portal](https://roadie.io)
 
 ## Tooling— Internal Developer Platforms
+- [AgentTier - Kubernetes-native platform that provisions isolated, persistent sandboxes for human developers and AI agents through a Sandbox CRD, with built-in governance and a streaming agent-mode REST API](https://github.com/agenttier/agenttier)
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
 
 ## Tooling— Microservices
