@@ -126,6 +126,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Middleware - A Full-Stack Cloud Observability Platform](https://middleware.io)
 - [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
 - [KubeStellar Console — AI-powered multi-cluster Kubernetes dashboard with real-time observability, CNCF integrations, and AI-guided operations. CNCF Sandbox project.](https://console.kubestellar.io)
+- [Ingero - eBPF-based GPU causal observability agent. Helm chart deploys as DaemonSet on K8s; traces CUDA APIs and host kernel events to explain GPU latency in AI/ML clusters](https://github.com/ingero-io/ingero)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
