@@ -137,6 +137,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Topaz- Combining the best of OPA and Zanzibar](https://github.com/aserto-dev/topaz)
 - [Permify- open-source authorization service](https://github.com/Permify/permify)
 - [Permit.io - Authorization as a service with a no-code UI](https://permit.io/)
+- [TWZRD Agent Intel](https://intel.twzrd.xyz) - AI agent identity and trust scoring on Solana. Verify agent wallet before x402 micropayments. MCP: `{"mcpServers":{"twzrd-agent-intel":{"url":"https://intel.twzrd.xyz/mcp"}}}`
 
 
 ## YouTube channels and Videos
