@@ -36,6 +36,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Internal Developer Platforms
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
+- [Fortem - ECS Fargate fleet control plane for platform engineers](https://fortem.dev). Per-environment scheduling, fleet-wide visibility, developer self-service, AI diagnostics. Works with existing Terraform.
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
