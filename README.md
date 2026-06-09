@@ -129,6 +129,7 @@ A curated list of tools and resources for Platform Engineering.
 - [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
 - [KubeStellar Console — AI-powered multi-cluster Kubernetes dashboard with real-time observability, CNCF integrations, and AI-guided operations. CNCF Sandbox project.](https://console.kubestellar.io)
 - [Ingero - eBPF-based GPU causal observability agent. Helm chart deploys as DaemonSet on K8s; traces CUDA APIs and host kernel events to explain GPU latency in AI/ML clusters](https://github.com/ingero-io/ingero)
+- [ZopNight - Multi-cloud FinOps autopilot for AWS, GCP, Azure. Auto-discovers 200+ resource types, auto-scales and schedules them on cron timetables, and surfaces 400+ audit rules pinpointing waste with one-click remediation. Supports Kubernetes (EKS/GKE/AKS) namespace-level scheduling.](https://zopnight.com/)
 
 ## Tooling— Authentication and Authorization
 - [CAS- Central Authentication Service](https://github.com/apereo/cas)
