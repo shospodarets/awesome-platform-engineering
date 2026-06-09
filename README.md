@@ -36,6 +36,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Internal Developer Platforms
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
+- [KnoxOps](https://knoxops.app/?invite_token=GITHUB26) - AI-native ops agent that gives AI agents production-safe execution with human review and a built-in knowledge graph.
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
