@@ -56,6 +56,7 @@ A curated list of tools and resources for Platform Engineering.
 - [ConfigCat - Privacy-first feature flag service](https://configcat.com/)
 - [OpenFeature - community-developed specification to standardise feature flag management](https://github.com/open-feature#welcome-to-the-openfeature-project-)
 - [Launchdarkly- feature flags paid service](https://launchdarkly.com/)
+- [Tombstone](https://github.com/sairam0424/Tombstone) - Self-hosted feature flag platform with circuit-breaker auto-rollback, blast-radius gating, and causal incident correlation. MIT, Go/Python/TypeScript.
 - [Git Guide: Generate A Changelog From Your Git Commit Messages](https://mokkapps.de/blog/how-to-automatically-generate-a-helpful-changelog-from-your-git-commit-messages/)
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
