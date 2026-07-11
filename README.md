@@ -37,6 +37,7 @@ A curated list of tools and resources for Platform Engineering.
 ## Tooling— Internal Developer Platforms
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
 - [Ota](https://github.com/ota-run/ota) - Open-source repo execution governance with machine-readable contracts for setup, verification, workflows, runtime proof, and agent-safe execution.
+- [nika](https://github.com/supernovae-st/nika) - Open-source workflow engine for AI (Rust, AGPL): platform teams codify agent tasks as .nika.yaml contracts, statically checked before execution (schema, permits, cost caps), with tamper-evident traces for audit.
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
