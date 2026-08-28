@@ -113,6 +113,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Testing and Metrics
 - [SonarQube- continuous code quality inspection](https://www.sonarsource.com/products/sonarqube/)
+- [RepoDoctor CI](https://github.com/BLCCoreStudio/RepoDoctor) - Repository health scoring and configurable CI quality gates.
 - [k6- performance/load testing tool](https://github.com/grafana/k6)
 - [ddosify- performance testing platform](https://github.com/ddosify/ddosify)
 - [Awesome Test Automation- a list of test automation frameworks, tools etc.](https://github.com/atinfo/awesome-test-automation)
