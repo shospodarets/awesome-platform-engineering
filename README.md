@@ -38,6 +38,7 @@ A curated list of tools and resources for Platform Engineering.
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
 - [Ota](https://github.com/ota-run/ota) - Open-source repo execution governance with machine-readable contracts for setup, verification, workflows, runtime proof, and agent-safe execution.
 - [SandBase Harness](https://github.com/sandbaseai/sandbase-harness) - Local-first agent runtime and MCP bridge for auditable sessions, sandboxed execution, approvals, and Docker/Kubernetes-backed platform workflows.
+- [YYLO](https://github.com/yylo-dev/yylo) - Command-line orchestrator for coding agents and repeatable workflows with typed task, validation, merge, and release-readiness boundaries; each task runs in a dedicated branch/worktree and a merge queue owns risk-based review for receipt-backed repository changes.
 
 ## Tooling— Microservices
 - [JHipster for microservices creation and integration at scale](https://www.jhipster.tech/)
