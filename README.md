@@ -196,3 +196,4 @@ A curated list of tools and resources for Platform Engineering.
 - [DevSecOps resources and tooling](https://github.com/TaptuIT/awesome-devsecops/)
 - [Architecture- Cloud Design Patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
 - [PlatformCon](https://platformcon.com) - The world's largest platform engineering conference.
+- [Wyrcan Engineering Roadmap](https://github.com/Wyrcan-io/roadmap) - Text-first 12-stage curriculum covering systems, Linux, Docker, AWS, Terraform, Kubernetes, and Observability.
