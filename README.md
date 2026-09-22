@@ -90,6 +90,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 - [Secure the software supply chain for OPA policies](https://github.com/opcr-io/policy)
 - [emisar](https://github.com/AndrewDryga/emisar) - A control plane for giving AI agents limited, auditable access to infrastructure operations through defined actions and policy rules.
+- [CRACI](https://craci.com/features/ci-cd) - Managed GitHub Actions runners that record an SBOM for each job and enforce an egress policy at the runner.
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Agyn](https://github.com/agynio/platform) - Kubernetes-native agent orchestration platform with Terraform-managed configuration (agents-as-code), audit logs, and scale-to-zero execution.
