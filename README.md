@@ -62,6 +62,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade JavaScript or TypeScript codebases](https://github.com/facebook/jscodeshift)
+- [Manifest API Bot](https://manifest.build/api-bot/) - GitHub App that checks the third-party APIs a repository calls every day and opens a pull request with an LLM-written code fix when a change affects the code.
 - [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://hub.qovery.com/guides/tutorial/getting-started-with-preview-environments-on-aws-for-beginners/)
 - [Bunnyshell- production replica environments for dev, QA and Staging](https://www.bunnyshell.com/)
 - [LocalStack- A fully functional local AWS cloud stack](https://github.com/localstack/localstack)
