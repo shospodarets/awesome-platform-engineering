@@ -122,6 +122,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Swarmia- tools to gather and improve engineering and DORA metrics](https://www.swarmia.com/product/objections/)
 - [Hydra Lab: build your intelligent cloud testing system](https://github.com/microsoft/HydraLab)
 - [OrcaReplay- record an agent or service run at its LLM-provider boundary and replay it offline, with no provider call and no API key](https://github.com/Continuum-AI-Corp/OrcaReplay)
+- [CodeOtter- self-hosted AI pull request review with scores and merge gates](https://codeotter.io/)
 
 ## Tooling— Observability and Cost Optimization
 - [Netdata- Open-source infrastructure monitoring](https://www.netdata.cloud/)
