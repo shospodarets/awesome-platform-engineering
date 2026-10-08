@@ -172,6 +172,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Platform Engineering story from a CTO: WHY, WHAT, HOW](https://medium.com/agorapulse-stories/platform-engineering-part-1-why-the-evolution-of-developer-cognitive-load-9f36f5cc2888)
 - [Create Preview Environments with Terraform, GitHub Actions, and Vercel](https://developer.hashicorp.com/terraform/tutorials/applications/preview-environments-vercel)
 - [Guide To Internal Developer Portals](https://www.getport.io/blog/guide-to-internal-developer-portals)
+- [FinOps at Design Time: Apptio Cloudability vs Vantage for Multi-Cloud Cost Governance](https://devtoolhub.com/finops-apptio-cloudability-vs-vantage/) - Pricing, setup gotchas, and which platform fits multi-cloud cost governance.
 
 ## Blogs and media platforms
 - [Platform Engineering](https://platformengineering.org)
