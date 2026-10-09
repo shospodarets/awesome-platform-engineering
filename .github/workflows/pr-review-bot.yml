@@ -141,3 +141,25 @@ jobs:
           PRS: ${{ needs.plan.outputs.prs }}
           PR_BOT_DISPATCH_PRS: ${{ inputs.prs }}
         run: python -m bot run --prs "$PRS"
+
+  notify:
+    # a crash outside the bot's own error handling (setup, install, lint) must still reach the maintainer:
+    # failure emails of PR-triggered runs go to the contributor who triggered them, not to him
+    needs: [plan, readme-lint, act]
+    if: failure()
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          open=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --label pr-bot:health --json number --jq length)
+          if [ "$open" = "0" ]; then
+            gh label create pr-bot:health -R "$GITHUB_REPOSITORY" --color 000000 --description "The PR review bot itself needs attention" 2>/dev/null || true
+            printf 'A PR review bot run crashed: %s\n\nThe 6-hourly sweep retries; close this issue once fixed (pr-bot-escalation).\n\n_* sent by AI_\n' "$RUN_URL" > body.md
+            gh issue create -R "$GITHUB_REPOSITORY" --title "PR review bot needs attention" --label pr-bot:health --assignee shospodarets --body-file body.md
+          else
+            echo "health issue already open"
+          fi

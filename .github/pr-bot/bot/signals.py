@@ -239,8 +239,12 @@ def fake_star_flags(ev: RepoEvidence) -> list[str]:
     n = ev.stars_as_of or ev.stars_now
     if n >= 50 and ev.forks <= 1 and ev.watchers <= 1 and ev.contributors <= 1:
         flags.append("stars are not matched by any forks, watchers or other contributors")
-    if n >= 50 and ev.biggest_star_day and ev.biggest_star_day / n >= 0.5:
-        # organic launches in the merge history peak at <=19% of all stars on one day; a farmed batch lands at once
+    spike = n >= 50 and ev.biggest_star_day and ev.biggest_star_day / n >= 0.5
+    corroborated = (ev.forks / max(n, 1) < 0.05 or (ev.ghost_forker_share or 0) > 0.2
+                    or (ev.issues_and_prs_seen and ev.outside_issue_authors == 0 and ev.forks <= 2))
+    if spike and corroborated:
+        # organic launches in the merge history peak at <=19% of all stars on one day; a farmed batch lands at
+        # once and leaves no forks or outside users behind (a genuine launch day alone is only a warning)
         flags.append(f"{int(100 * ev.biggest_star_day / n)}% of all stars arrived on a single day")
     if n >= 200 and ev.forks / max(n, 1) < 0.03:
         flags.append(f"fork-to-star ratio {ev.forks / n:.3f} is far below organic projects (~0.1-0.25)")
@@ -259,6 +263,8 @@ def star_warnings(ev: RepoEvidence) -> list[str]:
         warns.append("the stars just above the 50-star bar nearly all arrived within one week")
     if n >= 50 and ev.age_days_as_of < 30:
         warns.append(f"the repository is only {ev.age_days_as_of} days old")
+    if n >= 50 and ev.biggest_star_day and ev.biggest_star_day / n >= 0.5:
+        warns.append(f"{int(100 * ev.biggest_star_day / n)}% of all stars arrived on a single day")
     return warns
 
 

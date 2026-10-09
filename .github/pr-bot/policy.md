@@ -53,7 +53,9 @@ decline an otherwise strong project, but weigh them.
 
 ## Commercial and closed-source tools (no public repository)
 
-Merge only established vendors with independent evidence of real customers: years in the market, named
+Merge only established vendors with independent evidence of real customers, listed in
+`independent_evidence` as at least 5 pages you actually opened from at least 3 different sites (the code
+checks this): years in the market, named
 customers or case studies, funding, marketplace listings, independent reviews (history: ConfigCat since
 2018 with Fortune 500 customers; Middleware, YC W23 with named customers; ZopNight with an AWS Marketplace
 listing and a customer case study).

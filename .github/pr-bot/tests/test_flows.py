@@ -174,14 +174,31 @@ def test_third_party_comments_are_ignored(monkeypatch):
     gh = FakeGitHub(make_pr(state="open"), comments)
     monkeypatch.setattr("bot.llm.triage_comment", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no call")))
     assert M.handle_comments(gh, gh.pr, None)["result"].startswith("no new comments")
-    assert gh.pr["state"] == "open" and not gh.writes
+    assert gh.pr["state"] == "open"
+    assert all(w["method"] == "PATCH" and "/issues/comments/" in w["path"] for w in gh.writes)  # only progress saved
+
+
+def test_third_party_takedown_report_escalates(monkeypatch):
+    st = {"v": 1, "decision": "merge", "sha": "abc", "last_comment_id": 1}
+    comments = [{"id": 1, "user": {"login": "github-actions[bot]"}, "body": "merged" + C.marker(st)},
+                {"id": 2, "user": {"login": "victim"}, "body": "This links to a phishing copy of our site, please remove it"}]
+    gh = FakeGitHub(make_pr(state="closed", merged_at="2026-10-01T00:00:00Z"), comments)
+    monkeypatch.setattr("bot.llm.triage_comment", lambda *a, **k: (_ for _ in ()).throw(AssertionError("no call")))
+    assert M.handle_comments(gh, gh.pr, None)["result"] == "escalated (third-party report)"
 
 
 def test_merge_waits_for_lint_of_the_reviewed_commit():
     from bot.decide import post_llm
-    ev = {"lint": None, "entries": {"added": [], "modified": [], "duplicates": []}, "repos": []}
+    ev = {"lint": None, "entries": {"added": [{"url": "https://github.com/x/x", "github_repo": "x/x", "section": "S"}],
+                                    "modified": [], "duplicates": []},
+          "repos": [{"repo": "x/x", "exists": True, "stars_now": 900, "age_days_as_of": 300, "fake_star_flags": [],
+                     "linked_to_entry": True, "homepage": None}]}
     act = post_llm(ev, {"decision": "merge", "confidence": 0.95, "category": "tool"})
     assert act.kind == "defer"
+    ev["lint"] = {"ok": False, "summary": "x"}
+    assert post_llm(ev, {"decision": "merge", "confidence": 0.95, "category": "tool"}).kind == "request_changes"
+    ev["repos"][0]["stars_now"] = 3  # an unproven entry is not told "looks good, just fix lint"
+    assert post_llm(ev, {"decision": "merge", "confidence": 0.95, "category": "tool"}).kind == "escalate"
 
 
 def test_maintainer_reopen_is_left_to_him(monkeypatch):

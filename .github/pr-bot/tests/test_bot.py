@@ -66,7 +66,8 @@ def test_github_repo_and_urls():
     assert github_repo("https://github.com/a/b.git#readme") == "a/b"
     assert normalize_url("https://www.Example.com/x/?utm_source=y") == "example.com/x"
     assert registrable_domain("https://blog.example.co.uk/post") == "example.co.uk"
-    assert registrable_domain("https://medium.com/@x/y") == "medium.com"
+    assert registrable_domain("https://medium.com/@x/y") == "medium.com/@x"  # tenants of shared hosts differ
+    assert registrable_domain("https://alice.github.io/tool") == "alice.github.io"
 
 
 # -- signals -------------------------------------------------------------------------------
@@ -83,9 +84,12 @@ def test_fake_star_flags():
     launch = RepoEvidence(repo="a/b", stars_now=330, stars_as_of=300, forks=33, watchers=0, contributors=3,
                           age_days_as_of=63, max_14d_star_share=0.99)
     assert fake_star_flags(launch) == [] and star_warnings(launch)
-    farm = RepoEvidence(repo="a/b", stars_now=337, stars_as_of=302, forks=33, watchers=0, contributors=3,
+    farm = RepoEvidence(repo="a/b", stars_now=337, stars_as_of=302, forks=2, watchers=0, contributors=3,
                         age_days_as_of=63, biggest_star_day=300)
     assert any("single day" in f for f in fake_star_flags(farm))
+    launch_day = RepoEvidence(repo="a/b", stars_now=337, stars_as_of=302, forks=33, watchers=4, contributors=3,
+                              age_days_as_of=63, biggest_star_day=300, issues_and_prs_seen=20, outside_issue_authors=5)
+    assert fake_star_flags(launch_day) == [] and any("single day" in w for w in star_warnings(launch_day))
 
 
 def test_star_metrics_from_daily_history():

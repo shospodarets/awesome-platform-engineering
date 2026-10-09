@@ -29,8 +29,9 @@ STALE_DAYS = 14
 MAX_TRIAGE_REPLIES = 3
 MAX_REREVIEWS = 2
 MAX_TRIAGE_CALLS = 6
-MERGED_ALERT = re.compile(r"\b(remove|removal|take ?down|delete|wrong|incorrect|outdated|broken|legal|copyright|"
-                          r"trademark|lawyer|unfair|complain\w*|misleading)\b", re.I)
+ALERT = re.compile(r"\b(remove|removal|take ?down|delete|incorrect|outdated|legal|copyright|dmca|trademark|lawyer|"
+                   r"unfair|complain\w*|misleading|malware|miner|hijack\w*|compromised|security|vulnerab\w*|scam|"
+                   r"phishing)\b", re.I)
 LABELS = {
     "pr-bot:merged": ("0e8a16", "Merged by the PR review bot"),
     "pr-bot:declined": ("b60205", "Declined by the PR review bot"),
@@ -276,6 +277,8 @@ def handle_review(gh: GitHub, pr: dict, lint_dir: str | None, reason: str, force
                  # comments not yet triaged stay pending for their own issue_comment run
                  "last_comment_id": seen_up_to if seen_up_to is not None else (
                      state.get("last_comment_id", 0) if state else max([c["id"] for c in comments], default=0))}
+    if action.kind == "defer" and now() - parse_ts(pr["created_at"]) > timedelta(hours=48):
+        action = Action("escalate", "", "No awesome-lint result for this commit after 48 hours", gate="lint unavailable")
     result = apply(gh, pr, action, state_out)
     return {"pr": n, "trigger": reason, "result": result, "gate": action.gate, "reason": action.public_reason,
             "note": action.note, "confidence": review.get("confidence"), "model_decision": review.get("decision"),
@@ -299,19 +302,26 @@ def handle_comments(gh: GitHub, pr: dict, lint_dir: str | None) -> dict:
         if any((c.get("user") or {}).get("login") == pr["user"]["login"] for c in new):
             return handle_review(gh, pr, lint_dir, "author replied before any bot review", seen_up_to=top)
         return {"pr": n, "result": "no bot history"}
-    # only the PR author's replies drive the bot: third parties cannot withdraw, re-open or burn model calls
+    # only the PR author's replies drive the bot: third parties cannot withdraw, re-open or burn model calls,
+    # but a third party's takedown, abuse or security report still reaches the maintainer (no model call)
+    others = [c for c in new if (c.get("user") or {}).get("login") not in (pr["user"]["login"], OWNER)]
     new = [c for c in new if (c.get("user") or {}).get("login") == pr["user"]["login"]]
+    if "needs-maintainer" in labels:
+        return {"pr": n, "result": "waiting for maintainer"}  # assigned to him: GitHub mails him every reply
+    if any(ALERT.search(c.get("body", "")) for c in others):
+        escalate(gh, pr, Action("escalate", "", "A third party reported a problem (removal, abuse, legal or security)"),
+                 {**state, "v": 1, "last_comment_id": top})
+        return {"pr": n, "result": "escalated (third-party report)"}
     if not new:
+        if others:
+            save_state(gh, comments, {**state, "last_comment_id": top})
         return {"pr": n, "result": "no new comments from the author"}
     if state.get("triage_calls", 0) >= MAX_TRIAGE_CALLS:
-        escalate(gh, pr, Action("escalate", "the conversation needs the maintainer",
-                                "Triage cap reached on this PR"), {**state, "v": 1,
-                                "last_comment_id": max(c["id"] for c in comments)})
+        escalate(gh, pr, Action("escalate", "the conversation needs the maintainer", "Triage cap reached on this PR"),
+                 {**state, "v": 1, "triage_calls": 0, "last_comment_id": top})
         return {"pr": n, "result": "escalated (triage cap)"}
-    if "needs-maintainer" in labels:
-        return {"pr": n, "result": "waiting for maintainer"}
     if pr.get("merged_at"):  # thanks and chatter on merged PRs need no model call, but a complaint does
-        if any(MERGED_ALERT.search(c.get("body", "")) for c in new):
+        if any(ALERT.search(c.get("body", "")) for c in new):
             escalate(gh, pr, Action("escalate", "the contributor raised a concern about the merged entry",
                                     "Comment on a merged PR mentions a removal, correction or legal concern"),
                      {**state, "v": 1, "last_comment_id": top})
@@ -327,7 +337,12 @@ def handle_comments(gh: GitHub, pr: dict, lint_dir: str | None) -> dict:
     joined = {"author": latest["user"]["login"], "body": "\n\n---\n\n".join(c.get("body", "") for c in new)[:6000]}
     new_ids = {c["id"] for c in new}
     prior = [c for c in comments if c["id"] not in new_ids]
-    tri, usage = triage_comment(summary, conversation_text(prior)[-12:], joined, state)
+    try:
+        tri, usage = triage_comment(summary, conversation_text(prior)[-12:], joined, state)
+    except Exception as e:  # never lose a reply: if it cannot be classified, the maintainer gets it
+        escalate(gh, pr, Action("escalate", "", f"Could not triage the reply: {type(e).__name__}"),
+                 {**state, "v": 1, "last_comment_id": top})
+        return {"pr": n, "result": "escalated (triage failed)"}
     base_state = {**state, "v": 1, "last_comment_id": max(c["id"] for c in comments),
                   "triage_calls": state.get("triage_calls", 0) + 1}
     out = {"pr": n, "trigger": "comment", "intent": tri["intent"], "usage": usage}

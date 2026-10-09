@@ -26,8 +26,10 @@ Every comment ends with `_* sent by AI_`.
    usage sources across 3+ domains; low-confidence decisions and declines of established projects are
    escalated instead.
 
-Replies on a PR are triaged: new evidence triggers a re-review (and a reopen + merge if it now passes),
-questions get an answer, complaints and repeated back-and-forth are escalated.
+Replies on a PR are triaged: only the PR author's replies drive the bot. New evidence triggers a re-review
+(and a reopen + merge if it now passes, at most twice), questions get an answer, complaints and long
+back-and-forth are escalated. A takedown, abuse, legal or security report from anyone is escalated without a
+model call. If the maintainer reopens a PR the bot closed, the bot leaves that PR to him.
 
 ## Maintainer controls
 
@@ -39,10 +41,12 @@ questions get an answer, complaints and repeated back-and-forth are escalated.
 
 ## Notifications
 
-Gmail (shospodarets@gmail.com) marks every notification from this repository read, except mail with
-`Cc: assign@noreply.github.com` or the phrase `pr-bot-escalation`, which stays unread and starred.
-If the bot itself fails (e.g. API credit exhausted), it opens one "PR review bot needs attention" issue
-assigned to the maintainer.
+Gmail (shospodarets@gmail.com) marks PR notifications from this repository read, except mail with
+`Cc: assign@noreply.github.com`, `Cc: ci_activity@noreply.github.com` or the phrase `pr-bot-escalation`,
+which stays unread, starred and important. GitHub keeps the assign reason for the whole thread, so once a
+PR is escalated every later reply on it reaches the maintainer unread too.
+Issues (not PRs) and failed Actions runs also stay unread. If the bot itself fails (e.g. API credit
+exhausted, or a run crashes), it opens one "PR review bot needs attention" issue assigned to the maintainer.
 
 ## Cost and keys
 

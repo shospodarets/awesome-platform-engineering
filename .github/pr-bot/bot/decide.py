@@ -5,6 +5,7 @@ so a persuasive PR body or a prompt-injected web page cannot talk the bot into m
 """
 from __future__ import annotations
 
+import urllib.parse
 from dataclasses import dataclass, field
 
 from .readme import normalize_url, registrable_domain
@@ -64,6 +65,15 @@ def pre_llm(ev: dict, owner: str) -> Action | None:
     return None
 
 
+def same_host_link_fix(ev: dict) -> bool:
+    """An edit that only fixes an existing entry's link on the same site (or its redirect target)."""
+    mods, added = ev["entries"]["modified"], ev["entries"]["added"]
+    if not mods or added:
+        return False
+    targets = {registrable_domain(lk["final_url"]) for lk in ev.get("link_check", []) if lk.get("final_url")}
+    return all(registrable_domain(m["new"]["url"]) in ({registrable_domain(m["old"]["url"])} | targets) for m in mods)
+
+
 def _vendor_domains(ev: dict) -> set[str]:
     doms = set()
     for e in ev["entries"]["added"] + [m["new"] for m in ev["entries"]["modified"]]:
@@ -94,7 +104,10 @@ def popularity_proven(ev: dict, review: dict) -> tuple[bool, str]:
         dom = registrable_domain(url)
         if not dom or dom in vendor:
             continue
-        if any(o and o in url.lower() for o in owners):
+        parts = urllib.parse.urlsplit(url)
+        host = (parts.hostname or "").lower()
+        first = (parts.path.strip("/").split("/") or [""])[0].lower()
+        if (host in ("github.com", "gitlab.com") and first in owners) or any(host == f"{o}.github.io" for o in owners):
             continue
         indep.append(dom)
     if len(indep) >= FEEDBACK_BAR and len(set(indep)) >= 3:
@@ -116,17 +129,13 @@ def post_llm(ev: dict, review: dict) -> Action:
     category = review.get("category")
 
     if decision == "merge":
-        if not ev.get("lint"):
-            return Action("defer", "", "No awesome-lint result for this commit yet", gate="lint pending")
-        if lint and lint.get("ok") is False:
-            return Action("request_changes", "Thank you for the contribution! The entry looks good, "
-                          "but the README linter (awesome-lint) fails on this change:",
-                          note, changes=[f"Fix the awesome-lint error: {lint.get('summary') or 'see the failed check'}"],
-                          gate="merge blocked by lint")
         if ev["entries"]["duplicates"]:
             return Action("escalate", "it may duplicate an existing entry", note, gate="possible duplicate")
-        links_github = any(e.get("github_repo") for e in ev["entries"]["added"] + [m["new"] for m in ev["entries"]["modified"]])
-        if category in ("tool", "list", "edit") or links_github or any(r.get("linked_to_entry") for r in ev["repos"]):
+        entries = ev["entries"]["added"] + [m["new"] for m in ev["entries"]["modified"]]
+        links_github = any(e.get("github_repo") for e in entries)
+        in_tooling = any((e.get("section") or "").lower().startswith("tooling") for e in entries)
+        if not same_host_link_fix(ev) and (category in ("tool", "list") or links_github or in_tooling
+                                           or any(r.get("linked_to_entry") for r in ev["repos"])):
             ok, why = popularity_proven(ev, review)
             if not ok:
                 return Action("escalate", "", f"Model proposed merge but the hard bar is not proven ({why}). {note}",
@@ -136,6 +145,13 @@ def post_llm(ev: dict, review: dict) -> Action:
         elif conf < MERGE_MIN_CONFIDENCE_NO_REPO:
             return Action("escalate", "", f"Low-confidence merge of a {category} ({conf:.2f}). {note}",
                           gate="low confidence merge")
+        if not ev.get("lint"):
+            return Action("defer", "", "No awesome-lint result for this commit yet", gate="lint pending")
+        if lint.get("ok") is False:
+            return Action("request_changes", "The entry looks good, but the README linter (awesome-lint) fails on "
+                          "this change:", note,
+                          changes=[f"Fix the awesome-lint error: {lint.get('summary') or 'see the failed check'}"],
+                          gate="merge blocked by lint")
         return Action("merge", reason, note, gate="merge")
 
     if decision == "decline":

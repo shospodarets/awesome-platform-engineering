@@ -18,7 +18,8 @@ REVIEW_SCHEMA = {
         "independent_evidence": {
             "type": "array",
             "description": "Public, independent evidence of real usage or reputation (not the vendor's own pages, "
-                           "not the submitter's posts). Only include URLs you actually opened or saw in search results.",
+                           "not the submitter's posts). Only URLs you actually opened or saw in search results count; "
+                           "a tool without 50+ stars needs at least 5 such pages from at least 3 different sites.",
             "items": {
                 "type": "object",
                 "properties": {"url": {"type": "string"}, "what_it_shows": {"type": "string"}},
@@ -166,7 +167,12 @@ def triage_comment(evidence_summary: dict, conversation: list[dict], comment: di
     system = (
         "You handle replies on pull requests to shospodarets/awesome-platform-engineering on behalf of its "
         "maintainer, Serg Hospodarets. A bot already reviewed the PR. Classify the new comment and decide whether "
-        "the maintainer must personally step in.\n\n" + policy + "\n\n" + GUARD
+        "the maintainer must personally step in.\n\n"
+        "Intents: a complaint is any disagreement with the bot's decision, frustration, or a request for a human, "
+        "even when it also includes links; set needs_maintainer=true for complaints and for legal, abuse, security "
+        "or takedown topics. new_evidence is a calm reply that brings new facts (links, numbers) without disputing "
+        "the decision. withdrawal means the author no longer wants the PR. acknowledgement is thanks or agreement.\n\n"
+        + policy + "\n\n" + GUARD
     )
     user = (
         f"Current bot state for the PR: {json.dumps(bot_state)}\n\n"

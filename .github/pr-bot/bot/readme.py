@@ -65,11 +65,22 @@ def normalize_url(url: str) -> str:
     return norm.lower() if host == "github.com" else norm
 
 
+SHARED_HOSTS = {"github.io", "github.com", "gitlab.io", "gitlab.com", "readthedocs.io", "netlify.app", "vercel.app",
+                "pages.dev", "gitbook.io", "medium.com", "substack.com", "notion.site", "herokuapp.com", "web.app",
+                "blogspot.com", "wordpress.com", "dev.to", "hashnode.dev"}
+
+
 def registrable_domain(url: str) -> str:
+    """The site a URL belongs to. On shared hosting (github.io, medium.com, ...) every tenant is its own site."""
     host = (urllib.parse.urlsplit(url.strip()).hostname or "").lower()
     if host.startswith("www."):
         host = host[4:]
     parts = host.split(".")
+    if ".".join(parts[-2:]) in SHARED_HOSTS:
+        if len(parts) > 2:
+            return host  # alice.github.io, team.medium.com
+        first = urllib.parse.urlsplit(url.strip()).path.strip("/").split("/")[0].lower()
+        return f"{host}/{first}" if first else host  # medium.com/@alice, github.com/org
     if len(parts) >= 3 and parts[-2] in ("co", "com", "org", "net", "ac", "gov") and len(parts[-1]) == 2:
         return ".".join(parts[-3:])
     return ".".join(parts[-2:])
@@ -157,7 +168,8 @@ def find_duplicates(added: list[Entry], existing: list[Entry]) -> list[tuple[Ent
         for old in existing:
             same_url = normalize_url(new.url) == normalize_url(old.url)
             same_repo = new.github_repo and old.github_repo and new.github_repo.lower() == old.github_repo.lower()
-            same_name = _entry_key_name(new) == _entry_key_name(old) and len(_entry_key_name(new)) > 2
+            same_name = (_entry_key_name(new) == _entry_key_name(old) and len(_entry_key_name(new)) > 2
+                         and registrable_domain(new.url) == registrable_domain(old.url))
             if same_url or same_repo or same_name:
                 dups.append((new, old))
                 break
