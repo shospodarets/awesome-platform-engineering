@@ -90,7 +90,6 @@ A curated list of tools and resources for Platform Engineering.
 - [kube-bench checks whether Kubernetes security is aording to CIS K8S Benchmark](https://github.com/aquasecurity/kube-bench)
 - [Terraform Guardrails with OPA](https://compellingcloud.substack.com/p/navigating-safety-a-beginners-guide)
 - [Secure the software supply chain for OPA policies](https://github.com/opcr-io/policy)
-- [emisar](https://github.com/AndrewDryga/emisar) - A control plane for giving AI agents limited, auditable access to infrastructure operations through defined actions and policy rules.
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Agyn](https://github.com/agynio/platform) - Kubernetes-native agent orchestration platform with Terraform-managed configuration (agents-as-code), audit logs, and scale-to-zero execution.
@@ -136,8 +135,6 @@ A curated list of tools and resources for Platform Engineering.
 - [Loki - low cost open source logging; self-hosted or SaaS](https://grafana.com/oss/loki/)
 - [Middleware - A Full-Stack Cloud Observability Platform](https://middleware.io)
 - [AgentWatch - Multi-agent observability with cascade failure detection and fleet heartbeats](https://github.com/nicofains1/agentwatch)
-- [KubeStellar Console — AI-powered multi-cluster Kubernetes dashboard with real-time observability, CNCF integrations, and AI-guided operations. CNCF Sandbox project.](https://console.kubestellar.io)
-- [Ingero - eBPF-based GPU causal observability agent. Helm chart deploys as DaemonSet on K8s; traces CUDA APIs and host kernel events to explain GPU latency in AI/ML clusters](https://github.com/ingero-io/ingero)
 - [ZopNight - Multi-cloud FinOps autopilot for AWS, GCP, Azure. Auto-discovers 200+ resource types, auto-scales and schedules them on cron timetables, and surfaces 400+ audit rules pinpointing waste with one-click remediation. Supports Kubernetes (EKS/GKE/AKS) namespace-level scheduling.](https://zopnight.com/)
 
 ## Tooling— Authentication and Authorization
