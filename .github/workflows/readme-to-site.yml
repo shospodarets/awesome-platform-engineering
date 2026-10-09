@@ -3,6 +3,14 @@ on:
   push:
     branches:
       - main
+  # the PR review bot merges with GITHUB_TOKEN, which does not trigger push workflows,
+  # so it dispatches this workflow explicitly after each merge
+  workflow_dispatch:
+concurrency:
+  group: readme-to-site
+  cancel-in-progress: false
+permissions:
+  contents: write
 jobs:
   deploy:
     runs-on: ubuntu-latest
