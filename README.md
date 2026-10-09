@@ -67,6 +67,7 @@ A curated list of tools and resources for Platform Engineering.
 - [LocalStack- A fully functional local AWS cloud stack](https://github.com/localstack/localstack)
 - [Gitpod- cloud development environments](https://www.gitpod.io/)
 - [okteto- spin up dev and preview environments](https://www.okteto.com/)
+- [Keploy- open-source production-like sandboxes from real API traffic for integration and E2E testing](https://keploy.io)
 
 ## Tooling— Infrastructure and Artifacts Management
 - [Terragrunt for deployment environments (dev/staging/prod) and other features](https://github.com/gruntwork-io/terragrunt)
