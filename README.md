@@ -33,6 +33,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Port- A No-Code Developer Portal](https://getport.io/)
 - [Stoplight - API Design, Testing, and Documentation](https://stoplight.io/)
 - [Roadie - SaaS-based Internal Developer Portal](https://roadie.io)
+- [Oxynote - Self-hosted team wiki with live Prometheus and SQL charts inside runbooks, and pull-request-style reviews for docs.](https://github.com/oxynote/oxynote)
 
 ## Tooling— Internal Developer Platforms
 - [OpenChoreo - A complete, modular, open-source developer platform](https://openchoreo.dev/)
