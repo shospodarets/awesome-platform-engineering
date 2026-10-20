@@ -94,6 +94,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Tooling— Kubernetes, PAAS and Cloud services
 - [Agyn](https://github.com/agynio/platform) - Kubernetes-native agent orchestration platform with Terraform-managed configuration (agents-as-code), audit logs, and scale-to-zero execution.
+- [Cloud in a Bottle](https://github.com/cloud-in-a-bottle/cloud-in-a-bottle) - Deploy apps from Git repos as rootless Podman containers on a server you control, with per-app subdomains and custom TCP/UDP ports.
 - [Dokku- Open source PAAS alternative to Heroku](https://dokku.com/)
 - [Peon- Open source self-hosted Docker PaaS alternative to Vercel/Heroku](https://peon.sh/)
 - [Crossplane- control plane framework using K8s custom resources](https://www.crossplane.io/)
