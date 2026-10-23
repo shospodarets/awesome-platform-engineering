@@ -186,6 +186,7 @@ A curated list of tools and resources for Platform Engineering.
 
 ## Newsletters, Chats and Podcasts
 - [Platform weekly](https://platformweekly.com/)
+- [Jobs Brief](https://jobsbrief.eu) - Biweekly hand-curated senior cloud, platform, DevOps, SRE and AI-infra jobs, remote in EU.
 - [Platformengineering.org Slack](https://platformengineering.org/slack-rd)
 - [What's Platform Engineering? And How Does It Support DevOps?](https://www.listennotes.com/podcasts/the-new-stack/whats-platform-engineering-uoN5mXizUpP/)
 - [The New Stack Podcast](https://www.listennotes.com/podcasts/the-new-stack-podcast-the-new-stack-2tdxfCmwZr6/)
