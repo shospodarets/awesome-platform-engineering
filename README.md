@@ -80,6 +80,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Digger - Open Source Infratructure as Code management tool](https://www.github.com/diggerhq/digger)
 - [Terrateam - GitOps-first open-source IaC automation for Terraform, OpenTofu, and more](https://github.com/terrateamio/terrateam)
 - [Terramate - Infrastructure as Code collaboration, visibility and observability platform](https://terramate.io)
+- [Kumoss - Open-source, self-hosted AI assistant that plugs into your existing Git, LLM and identity stack, turning plain-language day-2 requests into plan-validated Terraform/OpenTofu pull requests with drift reconciled](https://github.com/InditexTech/kumoss)
 
 ## Tooling— Security and Policies
 - [terrascan- detect compliance and security violations in IaC/Terraform](https://github.com/tenable/terrascan)
