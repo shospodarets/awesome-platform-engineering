@@ -69,6 +69,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Gitpod- cloud development environments](https://www.gitpod.io/)
 - [okteto- spin up dev and preview environments](https://www.okteto.com/)
 - [Keploy- open-source production-like sandboxes from real API traffic for integration and E2E testing](https://keploy.io)
+- [Buddy- sandboxes for AI coding agents, environments, CI/CD pipelines and app hosting](https://buddy.works)
 
 ## Tooling— Infrastructure and Artifacts Management
 - [Terragrunt for deployment environments (dev/staging/prod) and other features](https://github.com/gruntwork-io/terragrunt)
