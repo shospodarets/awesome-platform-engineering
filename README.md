@@ -110,7 +110,7 @@ A curated list of tools and resources for Platform Engineering.
 - [KubeStellar Console - Multi-cluster Kubernetes dashboard with AI-powered operations and real-time observability](https://github.com/kubestellar/console)
 - [Radar](https://github.com/skyhook-io/radar) - Open-source Kubernetes visibility tool for topology, events, resources, Helm, GitOps, traffic, cost, audit, access control, and MCP for AI tools.
 - [mirrord](https://metalbear.com/mirrord/) - Open source tool that runs local code as if it were a pod in a remote Kubernetes cluster.
-- [Nife CLI](https://github.com/nifetency/nife-release) - Open-source CLI (MIT) to deploy, manage and scale applications across cloud, on-premises and edge infrastructure from one control plane.
+- [Nife CLI](https://github.com/nifetency/nife-release) - CLI for the Nife platform to deploy, manage and scale applications across cloud, on-premises and edge infrastructure from one control plane.
 
 ## Tooling— Service mesh, API Gateway and App Proxies
 - [BunkerWeb](https://github.com/bunkerity/bunkerweb) - Open-source Web Application Firewall and reverse proxy.
