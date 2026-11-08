@@ -63,7 +63,7 @@ A curated list of tools and resources for Platform Engineering.
 - [Update NPM, pip, Gem etc. dependencies](https://github.com/renovatebot/renovate)
 - [Upgrade microservices](https://www.jhipster.tech/upgrading-an-application/#-upgrading-an-application)
 - [Upgrade JavaScript or TypeScript codebases](https://github.com/facebook/jscodeshift)
-- [Git Qovery: PR/Commit Preview Environments Platform (paid)](https://www.qovery.com/docs/configuration/environment#preview-environments)
+- [Git Qovery: PR/Commit Preview Environments Platform (free plan available)](https://www.qovery.com/docs/configuration/environment#preview-environments)
 - [Bunnyshell- production replica environments for dev, QA and Staging](https://www.bunnyshell.com/)
 - [LocalStack- A fully functional local AWS cloud stack](https://github.com/localstack/localstack)
 - [Gitpod- cloud development environments](https://www.gitpod.io/)
