@@ -21,7 +21,7 @@ on:
         default: true
   schedule:
     # backstop sweep: catches anything a missed or failed event left behind
-    - cron: '23 */6 * * *'
+    - cron: '23 8 * * *'
 
 permissions: {}
 
@@ -158,7 +158,7 @@ jobs:
           open=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --label pr-bot:health --json number --jq length)
           if [ "$open" = "0" ]; then
             gh label create pr-bot:health -R "$GITHUB_REPOSITORY" --color 000000 --description "The PR review bot itself needs attention" 2>/dev/null || true
-            printf 'A PR review bot run crashed: %s\n\nThe 6-hourly sweep retries; close this issue once fixed (pr-bot-escalation).\n\n_* sent by AI_\n' "$RUN_URL" > body.md
+            printf 'A PR review bot run crashed: %s\n\nThe daily sweep retries; close this issue once fixed (pr-bot-escalation).\n\n_* sent by AI_\n' "$RUN_URL" > body.md
             gh issue create -R "$GITHUB_REPOSITORY" --title "PR review bot needs attention" --label pr-bot:health --assignee shospodarets --body-file body.md
           else
             echo "health issue already open"
