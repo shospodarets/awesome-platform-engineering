@@ -18,13 +18,19 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from . import comments as C
-from .decide import Action, post_llm, pre_llm
+from .decide import Action, changed_since_approval, duplicate_gate, post_llm, pre_llm
 from .gh import GitHub, GitHubError
-from .signals import gather, parse_ts
+from .signals import gather, parse_ts, repo_evidence
 
 OWNER = C.OWNER
 BOT_LOGINS = {"github-actions[bot]", os.environ.get("PR_BOT_LOGIN", "github-actions[bot]")}
 PAGES_WORKFLOW = "readme-to-site.yml"
+WORKFLOWS_DIR = ".github/workflows/"
+# runs whose actor is the maintainer: the daily sweep (a schedule's actor is whoever last edited the cron line)
+# and Actions > Run workflow
+MAINTAINER_RUNS = ("schedule", "workflow_dispatch")
+# state an action must save even when it posts no comment, or a later run redoes the work (and pays for it)
+PROGRESS_KEYS = ("last_comment_id", "rereviews", "triage_calls")
 STALE_DAYS = 14
 MAX_TRIAGE_REPLIES = 3
 MAX_REREVIEWS = 2
@@ -104,6 +110,72 @@ def save_state(gh: GitHub, comments: list[dict], state: dict) -> None:
             return
 
 
+def remember(gh: GitHub, comments: list[dict], state: dict) -> None:
+    """An action that posts no comment (a repeated outcome) still records the progress it made, e.g. the
+    `/bot review` it answered, so the next run does not redo it. Only when that progress changed: an edit also
+    counts as activity for handle_stale."""
+    stored = bot_state(comments)
+    if any(state.get(k) != stored.get(k) for k in PROGRESS_KEYS):
+        if stored.get("decision") == "reply":  # the marker stays a reply, or MAX_TRIAGE_REPLIES stops counting it
+            state = {**state, "decision": "reply"}
+        save_state(gh, comments, state)
+
+
+def settled(state: dict) -> dict:
+    """State for any newly recorded decision: a refused merge stays pending (merge_pending) only until something
+    else is decided. merge_refused sets refused_sha again; a reply keeps it (handle_comments)."""
+    return {k: v for k, v in state.items() if k != "refused_sha"}
+
+
+def digest(pr: dict) -> str:
+    """The title and description an approval read: a retried merge waits when they change."""
+    import hashlib
+    return hashlib.sha256(f"{pr.get('title') or ''}\n{pr.get('body') or ''}".encode()).hexdigest()[:16]
+
+
+def activity_since_refusal(gh: GitHub, pr: dict, comments: list[dict], state: dict) -> str | None:
+    """Why a retried merge, which no model reviews, must wait: someone other than the bot commented or reviewed
+    after the approving review read the PR (read_up_to, read_at; a comment posted while that review ran counts),
+    or the title or description changed since. The author's push brings a normal review; the maintainer's
+    `/bot review` (a fresh review that reads the conversation) restarts the count. A bot reply after the read
+    point counts too: it answered something no review weighed (e.g. a comment the approval read before triage)."""
+    def by(c):
+        return (c.get("user") or {}).get("login")
+    cut, since = state.get("read_up_to"), state.get("read_at")
+    if cut is None:  # no read point recorded: count from the refusal comment
+        marks = [c for c in comments if by(c) in BOT_LOGINS
+                 and (C.read_state(c.get("body", "")) or {}).get("refused_sha") == pr["head"]["sha"]]
+        if not marks:
+            return "the refusal comment is missing"
+        cut, since = marks[0]["id"], marks[0].get("created_at")
+    since = since or ""
+    for c in comments:  # his handled `/bot review`: a fresh review read everything up to it
+        if by(c) == OWNER and "/bot review" in c.get("body", "") and cut < c["id"] <= state.get("last_comment_id", 0):
+            cut, since = c["id"], c.get("created_at") or since
+    def answered(c):
+        return by(c) in BOT_LOGINS and (C.read_state(c.get("body", "")) or {}).get("decision") == "reply"
+    if any(c["id"] > cut and (by(c) not in BOT_LOGINS or answered(c)) for c in comments):
+        return "a comment since the approval"
+    try:
+        for path, key in ((f"/pulls/{pr['number']}/reviews", "submitted_at"), (f"/pulls/{pr['number']}/comments", "created_at")):
+            if any(by(r) not in BOT_LOGINS and (r.get(key) or "") > since for r in gh.paginate(gh.r(path), max_pages=3)):
+                return "a review since the approval"
+    except GitHubError:
+        return "the PR's reviews could not be read"
+    if state.get("text") and state["text"] != digest(pr):
+        return "the title or description changed since the approval"
+    return None
+
+
+def unhandled_comments(comments: list[dict], state: dict) -> list[dict]:
+    """Comments no triage has handled yet, e.g. one whose run is queued or failed: a withdrawal must be read before
+    any merge. The maintainer's notes are not triaged; they count until a review reads them (read_up_to)."""
+    since, read = state.get("last_comment_id", 0), state.get("read_up_to", 0)
+    def by(c):
+        return (c.get("user") or {}).get("login")
+    return [c for c in comments if c["id"] > since and by(c) not in BOT_LOGINS and not (by(c) == OWNER and c["id"] <= read)]
+
+
 # -- lint ----------------------------------------------------------------------------------
 
 def load_lint(gh: GitHub, pr: dict, lint_dir: str | None) -> dict | None:
@@ -145,10 +217,80 @@ def wait_mergeable(gh: GitHub, number: int) -> dict:
     return pr
 
 
-def apply(gh: GitHub, pr: dict, action: Action, state: dict) -> str:
+def integration_denied(err: GitHubError) -> bool:
+    return err.status == 403 and "not accessible by integration" in (err.message or "").lower()
+
+
+def can_write_contents(gh: GitHub) -> bool:
+    """A token that lost `contents: write` (an edit of the workflow's permissions) gets the same 403 from the merge,
+    and that edit is itself a workflow gap for every older branch. Creating a git blob needs the same permission
+    and changes nothing: no ref, no event, and the same content always makes the same unreferenced blob."""
+    try:
+        gh.write("POST", gh.r("/git/blobs"), {"content": "pr-bot: contents permission check", "encoding": "utf-8"})
+        return True
+    except GitHubError:
+        return False
+
+
+def workflow_gap(gh: GitHub, pr: dict) -> list[str]:
+    """Workflow files main changed after the PR's branch was created ([] when there are none, or on error)."""
+    base = (pr.get("base") or {}).get("ref") or "main"
+    try:
+        cmp = gh.get(gh.r(f"/compare/{pr['head']['sha']}...{base}")) or {}
+    except GitHubError:
+        return []
+    return [f["filename"] for f in cmp.get("files") or [] if f.get("filename", "").startswith(WORKFLOWS_DIR)]
+
+
+def merge_pending(state: dict, pr: dict) -> bool:
+    """GitHub refused the approved merge of exactly this commit (merge_refused), and nothing has decided otherwise
+    since: a bot reply to a question in between keeps it pending."""
+    return state.get("refused_sha") == pr["head"]["sha"] and state.get("decision") in ("approved-needs-update", "reply")
+
+
+def merge_refused(gh: GitHub, pr: dict, state: dict, author: str, gap: list[str], comments: list[dict]) -> str:
+    """GitHub refuses the Actions token's merge of a fork branch based on an older main that lacks main's newer
+    workflow changes: 403 "Resource not accessible by integration", since the token can never hold the
+    workflows permission (it refused #90). Not a bot failure, so no health issue: the author is asked once per
+    commit to update the branch (the push brings a normal review and merge), maintainer runs retry the merge
+    (retry_merge) and two quiet weeks escalate to the maintainer (handle_stale)."""
+    n, sha = pr["number"], pr["head"]["sha"]
+    log(f"#{n}: GitHub refused the merge; the branch lacks main's newer {', '.join(gap)}")
+    st = {**state, "decision": "approved-needs-update", "refused_sha": sha}
+    if not merge_pending(bot_state(comments), pr):
+        comment(gh, n, C.approved_needs_update(st, author))
+    else:
+        remember(gh, comments, st)
+    set_bot_label(gh, pr, "pr-bot:approved-needs-rebase")
+    return "approved-needs-update"
+
+
+def retry_merge(gh: GitHub, pr: dict, state: dict, reason: str, comments: list[dict]) -> dict:
+    """Retry a merge GitHub refused earlier (merge_refused) in a run the maintainer started: GitHub does not apply
+    the refusal consistently (a maintainer-dispatched run merged #76, which had the same gap). The same commit gets
+    no new model review, but the deterministic gates run again against the current main: the hard gates, possible
+    duplicates, and the entry's link and repository. Not awesome-lint: this commit's README passed it already, and
+    re-linting it against a newer main can only report errors main has fixed since."""
+    ev = gather(gh, pr, deep=False).to_dict()
+    for slug in state.get("linked_repos") or []:  # the approval may rest on them (handle_review)
+        rep = repo_evidence(gh, slug, now(), pr["user"]["login"], deep=False)
+        rep.linked_to_entry = True
+        ev["repos"].append(rep.summary())
+    action = (pre_llm(ev, OWNER) or duplicate_gate(ev) or changed_since_approval(ev)
+              or Action("merge", gate="approved earlier; merge retried"))
+    st = {**state, "prev_decision": state.get("decision"), "prev_sha": state.get("sha")}
+    result = apply(gh, pr, action, st, comments)
+    if result == "approved-needs-update":
+        result = "waiting for branch update (merge refused again)"
+    return {"pr": pr["number"], "trigger": reason, "result": result, "gate": action.gate,
+            "reason": action.public_reason, "note": action.note}
+
+
+def apply(gh: GitHub, pr: dict, action: Action, state: dict, comments: list[dict] | None = None) -> str:
     n = pr["number"]
     author = pr["user"]["login"]
-    state = {**state, "decision": action.kind, "sha": pr["head"]["sha"], "at": now().strftime("%Y-%m-%dT%H:%M:%SZ")}
+    state = {**settled(state), "decision": action.kind, "sha": pr["head"]["sha"],
+             "at": now().strftime("%Y-%m-%dT%H:%M:%SZ")}
     if action.kind in ("skip", "defer"):
         return action.kind
     if action.kind == "merge":
@@ -165,16 +307,27 @@ def apply(gh: GitHub, pr: dict, action: Action, state: dict) -> str:
                 if reopened["head"]["sha"] != pr["head"]["sha"]:
                     return "reopened (newer commits; the next run reviews them)"
         fresh = wait_mergeable(gh, n) if not gh.dry_run else pr
+        if (fresh.get("head") or {}).get("sha", pr["head"]["sha"]) != pr["head"]["sha"]:
+            return "waiting (new commits since this run read the PR)"  # their own run reviews them; a merge would 409
         if fresh.get("mergeable") is False:
+            st = {**state, "decision": "approved-needs-rebase"}
             if state.get("prev_decision") != "approved-needs-rebase" or state.get("prev_sha") != pr["head"]["sha"]:
-                comment(gh, n, C.approved_needs_rebase({**state, "decision": "approved-needs-rebase"}, author))
+                comment(gh, n, C.approved_needs_rebase(st, author))
+            else:
+                remember(gh, comments or [], st)
             set_bot_label(gh, pr, "pr-bot:approved-needs-rebase")
             return "approved-needs-rebase"
-        gh.write("PUT", gh.r(f"/pulls/{n}/merge"), {
-            "merge_method": "merge", "sha": pr["head"]["sha"],
-            "commit_title": f"Merge pull request #{n} from {pr['head'].get('label', '')}",
-            "commit_message": pr["title"],
-        })
+        try:
+            gh.write("PUT", gh.r(f"/pulls/{n}/merge"), {
+                "merge_method": "merge", "sha": pr["head"]["sha"],
+                "commit_title": f"Merge pull request #{n} from {pr['head'].get('label', '')}",
+                "commit_message": pr["title"],
+            })
+        except GitHubError as e:
+            gap = workflow_gap(gh, pr) if integration_denied(e) else []
+            if not gap or not can_write_contents(gh):
+                raise
+            return merge_refused(gh, pr, state, author, gap, comments or [])
         comment(gh, n, C.merged(state, author))
         set_bot_label(gh, pr, "pr-bot:merged")
         dispatch_pages(gh)
@@ -200,7 +353,7 @@ def apply(gh: GitHub, pr: dict, action: Action, state: dict) -> str:
 
 def escalate(gh: GitHub, pr: dict, action: Action, state: dict) -> None:
     n = pr["number"]
-    state = {**state, "decision": "escalate", "note": (action.note or "")[:300]}
+    state = {**settled(state), "decision": "escalate", "note": (action.note or "")[:300]}
     # Gmail keeps mail with Cc assign@noreply.github.com or the escalation marker unread and starred
     gh.write("POST", gh.r(f"/issues/{n}/assignees"), {"assignees": [OWNER]})
     set_bot_label(gh, pr, "needs-maintainer")
@@ -257,6 +410,7 @@ def conversation_text(comments: list[dict]) -> list[dict]:
 def handle_review(gh: GitHub, pr: dict, lint_dir: str | None, reason: str, force: bool = False,
                   seen_up_to: int | None = None) -> dict:
     n = pr["number"]
+    read_at = now().strftime("%Y-%m-%dT%H:%M:%SZ")  # this run sees the conversation as of now
     comments = issue_comments(gh, n)
     state = bot_state(comments)
     labels = {l["name"] for l in pr.get("labels", [])}
@@ -264,6 +418,21 @@ def handle_review(gh: GitHub, pr: dict, lint_dir: str | None, reason: str, force
         return {"pr": n, "result": "already merged"}
     if "needs-maintainer" in labels and not force:
         return {"pr": n, "result": "waiting for maintainer"}
+    if merge_pending(state, pr) and not force:
+        if pr.get("state") != "open":  # e.g. withdrawn: never reopened by a retry
+            return {"pr": n, "result": "closed"}
+        if reason not in MAINTAINER_RUNS:
+            return {"pr": n, "result": "waiting for branch update"}
+        pr = gh.get(gh.r(f"/pulls/{n}"))  # a sweep lists its PRs once, maybe minutes ago: retry the PR as it is now
+        if pr.get("merged_at") or pr.get("state") != "open" or not merge_pending(state, pr) \
+                or "needs-maintainer" in {l["name"] for l in pr.get("labels", [])}:
+            return {"pr": n, "result": "waiting (the PR changed during this run)"}
+        why = activity_since_refusal(gh, pr, comments, state)
+        if why:  # a retry merges only a quiet PR: anything said or edited since needs a fresh review
+            return {"pr": n, "result": f"waiting for branch update ({why})"}
+        if unhandled_comments(comments, state):  # e.g. posted while the approving review ran
+            return {"pr": n, "result": "waiting for branch update (comments to handle first)"}
+        return retry_merge(gh, pr, state, reason, comments)
     if state.get("sha") == pr["head"]["sha"] and state.get("decision") not in (None, "error") and not force:
         return {"pr": n, "result": f"already reviewed ({state.get('decision')})"}
     convo = conversation_text(comments)
@@ -277,9 +446,18 @@ def handle_review(gh: GitHub, pr: dict, lint_dir: str | None, reason: str, force
                  # comments not yet triaged stay pending for their own issue_comment run
                  "last_comment_id": seen_up_to if seen_up_to is not None else (
                      state.get("last_comment_id", 0) if state else max([c["id"] for c in comments], default=0))}
+    if action.kind == "merge":  # what a retried merge (retry_merge) checks again
+        state_out["text"] = digest(pr)
+        # the conversation this approval read: anything said after it holds a retry (activity_since_refusal)
+        state_out["read_up_to"], state_out["read_at"] = max([c["id"] for c in comments], default=0), read_at
+        # repos linked by homepage (PR body, or found by the review) may carry the approval, and gather() cannot
+        # link one again once it is deleted (no homepage left to match): the retry re-checks them by name
+        linked = [r["repo"] for r in (ev or {}).get("repos", []) if r.get("linked_to_entry") and r.get("source") != "entry"]
+        if linked:
+            state_out["linked_repos"] = linked
     if action.kind == "defer" and now() - parse_ts(pr["created_at"]) > timedelta(hours=48):
         action = Action("escalate", "", "No awesome-lint result for this commit after 48 hours", gate="lint unavailable")
-    result = apply(gh, pr, action, state_out)
+    result = apply(gh, pr, action, state_out, comments)
     return {"pr": n, "trigger": reason, "result": result, "gate": action.gate, "reason": action.public_reason,
             "note": action.note, "confidence": review.get("confidence"), "model_decision": review.get("decision"),
             "usage": usage}
@@ -353,7 +531,7 @@ def handle_comments(gh: GitHub, pr: dict, lint_dir: str | None) -> dict:
         return {**out, "result": "escalated"}
     if tri["intent"] == "withdrawal":
         if pr["state"] == "open":
-            comment(gh, n, C.withdrawn({**base_state, "decision": "withdrawn"}, pr["user"]["login"]))
+            comment(gh, n, C.withdrawn({**settled(base_state), "decision": "withdrawn"}, pr["user"]["login"]))
             gh.write("PATCH", gh.r(f"/pulls/{n}"), {"state": "closed"})
         return {**out, "result": "closed (withdrawn)"}
     if tri["rereview"] or tri["intent"] == "new_evidence":
@@ -375,7 +553,8 @@ def handle_comments(gh: GitHub, pr: dict, lint_dir: str | None) -> dict:
         save_state(gh, comments, base_state)  # mark these comments as handled
         return {**out, "result": f"no reply ({tri['intent']})"}
     if tri.get("reply"):
-        comment(gh, n, C.reply(tri["reply"], {**base_state, "decision": "reply"}))
+        kept = base_state if merge_pending(state, pr) else settled(base_state)  # an answer decides nothing
+        comment(gh, n, C.reply(tri["reply"], {**kept, "decision": "reply"}))
         return {**out, "result": "replied"}
     escalate(gh, pr, Action("escalate", "", tri.get("maintainer_note", "")), base_state)
     return {**out, "result": "escalated"}
@@ -389,7 +568,15 @@ def handle_stale(gh: GitHub, pr: dict) -> dict | None:
     if now() - updated < timedelta(days=STALE_DAYS):
         return None
     comments = issue_comments(gh, pr["number"])
-    st = {**bot_state(comments), "decision": "stale-closed"}
+    state = bot_state(comments)
+    if merge_pending(state, pr):  # an approved entry is not closed: a maintainer can merge it
+        escalate(gh, pr, Action("escalate", "the entry is approved, but GitHub refused the bot's merge and the "
+                                "branch was not updated",
+                                "Not merged within 14 days of the last activity (GitHub refused the merge, or a comment "
+                                "or review held the retry), and the branch was not updated"),
+                 {**state, "v": 1})
+        return {"pr": pr["number"], "result": "escalated (merge refused for two weeks)"}
+    st = {**settled(state), "decision": "stale-closed"}
     comment(gh, pr["number"], C.stale_closed(st))
     set_bot_label(gh, pr, "pr-bot:declined")
     gh.write("PATCH", gh.r(f"/pulls/{pr['number']}"), {"state": "closed"})
@@ -456,11 +643,7 @@ def run(gh: GitHub, event_name: str, event: dict, prs: list[int], lint_dir: str 
         open_prs = gh.paginate(gh.r("/pulls"), max_pages=5, state="open", sort="created", direction="asc")
         for pr in open_prs:
             try:
-                stale = handle_stale(gh, pr)
-                res = stale or handle_review(gh, pr, lint_dir, event_name)
-                if not stale and str(res.get("result", "")).startswith(("already reviewed", "waiting")):
-                    res = handle_comments(gh, pr, lint_dir)  # replies a missed or failed run left pending
-                results.append(res)
+                results.append(handle_stale(gh, pr) or review_and_catch_up(gh, pr, lint_dir, event_name))
             except Exception as e:  # keep going with the other PRs
                 results.append(on_error(gh, pr, e))
         return results
@@ -481,6 +664,17 @@ def run(gh: GitHub, event_name: str, event: dict, prs: list[int], lint_dir: str 
         except Exception as e:
             results.append(on_error(gh, pr, e))
     return results
+
+
+def review_and_catch_up(gh: GitHub, pr: dict, lint_dir: str | None, event_name: str) -> dict:
+    """The sweep: review, then handle the replies a missed or failed run left pending. The summary keeps the
+    review's result unless the replies led to an action."""
+    res = handle_review(gh, pr, lint_dir, event_name)
+    if str(res.get("result", "")).startswith(("already reviewed", "waiting")):
+        cres = handle_comments(gh, pr, lint_dir)
+        if not str(cres.get("result", "")).startswith(("no new comments", "no bot history")):
+            res = cres
+    return res
 
 
 def on_error(gh: GitHub, pr: dict, err: Exception) -> dict:
