@@ -197,7 +197,8 @@ def test_every_comment_is_signed_once_and_carries_state():
     st = {"v": 1, "decision": "decline", "sha": "abc"}
     bodies = [C.merged(st), C.declined("Too early.", st), C.changes_requested("", ["fix"], st),
               C.escalated("needs a look", st), C.reply("hi", st), C.stale_closed(st), C.withdrawn(st),
-              C.declined_duplicate("X", "S", st), C.approved_needs_rebase(st)]
+              C.declined_duplicate("X", "S", st), C.approved_needs_rebase(st),
+              C.approved_needs_update(st)]
     for b in bodies:
         assert b.count("_* sent by AI_") == 1
         assert C.read_state(b)["sha"] == "abc"

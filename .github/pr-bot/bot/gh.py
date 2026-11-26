@@ -14,7 +14,7 @@ API = "https://api.github.com"
 class GitHubError(RuntimeError):
     def __init__(self, status: int, message: str, url: str):
         super().__init__(f"GitHub {status} on {url}: {message}")
-        self.status = status
+        self.status, self.message, self.url = status, message, url
 
 
 class GitHub:

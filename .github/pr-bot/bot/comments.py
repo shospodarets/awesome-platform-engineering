@@ -60,6 +60,14 @@ def approved_needs_rebase(state: dict, author: str = "") -> str:
             "automatically." + FOOTER + marker(state))
 
 
+def approved_needs_update(state: dict, author: str = "") -> str:
+    return (f"Thank you for the contribution{_who(author)}! The entry is approved, but GitHub does not let this bot "
+            "merge the branch yet: it is based on an older `main` of this repository, without its latest GitHub "
+            "Actions workflow changes. Please update the branch with this repository's latest `main` (the **Update "
+            "branch** button on this PR, or merge the upstream `main` into your branch and push): the bot then "
+            "reviews the updated branch and merges it if it still meets the bar." + FOOTER + marker(state))
+
+
 def declined(reason: str, state: dict, author: str = "") -> str:
     reason = _clean(reason)
     return (f"Thank you for the contribution{_who(author)}. {reason}\n\n"

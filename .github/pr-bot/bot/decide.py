@@ -120,17 +120,51 @@ def _established(ev: dict) -> bool:
                and not r.get("fake_star_flags") for r in ev["repos"])
 
 
+def duplicate_gate(ev: dict, note: str = "") -> Action | None:
+    """Every merge, with or without a fresh model review: a possible duplicate goes to the maintainer."""
+    if ev["entries"]["duplicates"]:
+        return Action("escalate", "it may duplicate an existing entry", note, gate="possible duplicate")
+    return None
+
+
+def lint_gate(ev: dict, note: str = "") -> Action | None:
+    """A merge after a model review: awesome-lint must pass on the commit being merged. A retried merge
+    (retry_merge) skips it: that commit passed already."""
+    lint = ev.get("lint") or {}
+    if not ev.get("lint"):
+        return Action("defer", "", "No awesome-lint result for this commit yet", gate="lint pending")
+    if lint.get("ok") is False:
+        return Action("request_changes", "The entry looks good, but the README linter (awesome-lint) fails on "
+                      "this change:", note,
+                      changes=[f"Fix the awesome-lint error: {lint.get('summary') or 'see the failed check'}"],
+                      gate="merge blocked by lint")
+    return None
+
+
+def changed_since_approval(ev: dict) -> Action | None:
+    """A merge retried without a new model review (retry_merge): the entry's link or its repository can break
+    after the approval (the policy declines broken links and archived repositories), so that goes to the
+    maintainer instead of being merged."""
+    gone = [h for h in ev.get("hard_findings", []) if h.startswith("broken link")]
+    gone += [f"{r['repo']} is {'archived' if r.get('exists') else 'gone'}" for r in ev.get("repos", [])
+             if r.get("linked_to_entry") and (not r.get("exists") or r.get("archived"))]
+    if gone:
+        return Action("escalate", "the entry's link or repository needs a check before it is merged",
+                      ("Changed since the approval: " + "; ".join(gone))[:300], gate="changed since approval")
+    return None
+
+
 def post_llm(ev: dict, review: dict) -> Action:
     decision = review["decision"]
     conf = float(review.get("confidence") or 0)
     reason = review.get("reason_for_submitter", "")
     note = review.get("maintainer_note", "")
-    lint = ev.get("lint") or {}
     category = review.get("category")
 
     if decision == "merge":
-        if ev["entries"]["duplicates"]:
-            return Action("escalate", "it may duplicate an existing entry", note, gate="possible duplicate")
+        dup = duplicate_gate(ev, note)
+        if dup:
+            return dup
         entries = ev["entries"]["added"] + [m["new"] for m in ev["entries"]["modified"]]
         links_github = any(e.get("github_repo") for e in entries)
         in_tooling = any((e.get("section") or "").lower().startswith("tooling") for e in entries)
@@ -145,14 +179,7 @@ def post_llm(ev: dict, review: dict) -> Action:
         elif conf < MERGE_MIN_CONFIDENCE_NO_REPO:
             return Action("escalate", "", f"Low-confidence merge of a {category} ({conf:.2f}). {note}",
                           gate="low confidence merge")
-        if not ev.get("lint"):
-            return Action("defer", "", "No awesome-lint result for this commit yet", gate="lint pending")
-        if lint.get("ok") is False:
-            return Action("request_changes", "The entry looks good, but the README linter (awesome-lint) fails on "
-                          "this change:", note,
-                          changes=[f"Fix the awesome-lint error: {lint.get('summary') or 'see the failed check'}"],
-                          gate="merge blocked by lint")
-        return Action("merge", reason, note, gate="merge")
+        return lint_gate(ev, note) or Action("merge", reason, note, gate="merge")
 
     if decision == "decline":
         if conf < DECLINE_MIN_CONFIDENCE:
